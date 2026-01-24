@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Mecânica RG4 - Serviços Automotivos de Qualidade</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0066b3 0%, #004d87 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066b3 0%, #004d87 100%);
+            color: white;
+            padding: 150px 2rem 100px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #0066b3;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #0066b3;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #0066b3;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,102,179,0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #0066b3;
+        }
+
+        .service-card h3 {
+            color: #0066b3;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: #0066b3;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .about-text ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .about-text li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .about-text li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0066b3;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #f8f9fa;
+        }
+
+        .google-reviews-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .manual-review-note {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .manual-review-note h3 {
+            color: #0066b3;
+            margin-bottom: 1rem;
+        }
+
+        .google-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #0066b3;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .google-link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,102,179,0.3);
+        }
+
+        /* Contact */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #0066b3 0%, #004d87 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            color: #0066b3;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #0066b3;
+        }
+
+        /* Map Section */
+        .map-container {
+            margin-top: 3rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #0066b3;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://i.imgur.com/sc5KPkR.png" alt="RG4 Logo">
+                <span style="font-weight: bold; font-size: 1.2rem;">Auto Mecânica RG4</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>Auto Mecânica RG4</h1>
+        <p>Excelência em Serviços Automotivos com Confiança e Qualidade</p>
+        <div class="cta-buttons">
+            <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
+            <a href="https://wa.me/5515997867112" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Manutenção Preventiva</h3>
+                <p>Revisões completas para manter seu veículo sempre em perfeito estado e evitar problemas futuros.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Mecânica Geral</h3>
+                <p>Diagnóstico e reparo de sistemas mecânicos com equipamentos modernos e técnicos especializados.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛞</div>
+                <h3>Troca de Óleo e Filtros</h3>
+                <p>Serviços rápidos de troca de óleo, filtros e fluidos com produtos de alta qualidade.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Diagnóstico Eletrônico</h3>
+                <p>Análise computadorizada para identificar problemas eletrônicos com precisão.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3>Suspensão e Freios</h3>
+                <p>Reparos e manutenção de sistemas de suspensão e freios para sua segurança.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <h3>Ar Condicionado</h3>
+                <p>Manutenção e recarga de ar condicionado automotivo com garantia de qualidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre a RG4</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Compromisso com a Excelência</h3>
+                <p>A Auto Mecânica RG4 é referência em serviços automotivos, oferecendo soluções completas com qualidade, agilidade e preços justos. Nossa equipe de profissionais qualificados está sempre pronta para atender você com dedicação e transparência.</p>
+                <ul>
+                    <li>Equipe técnica especializada e certificada</li>
+                    <li>Equipamentos modernos e tecnologia de ponta</li>
+                    <li>Peças originais e de qualidade garantida</li>
+                    <li>Atendimento personalizado e transparente</li>
+                    <li>Garantia em todos os serviços realizados</li>
+                    <li>Localização privilegiada e fácil acesso</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600" alt="Oficina RG4" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="avaliacoes">
+        <h2>Avaliações dos Nossos Clientes</h2>
+        
+        <div class="manual-review-note">
+            <h3>⭐ Veja nossas avaliações no Google</h3>
+            <p>Confira o que nossos clientes dizem sobre nossos serviços!</p>
+            <a href="https://search.google.com/local/reviews?placeid=ChIJtVELhguKxZQRSk8rJ2vRaxs" target="_blank" rel="noopener noreferrer" class="google-link-btn">
+                <span>📍</span>
+                <span>Ver Avaliações no Google</span>
+            </a>
+        </div>
+
+        <div class="google-reviews-container">
+             <iframe 
+                src="https://maps.google.com/maps?q=Rua%20Professor%20Jos%C3%A9%20do%20Carmo%20Madureira%2C%2092%20-%20Votorantim&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="450" 
+                style="border:0; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Informações de Contato</h3>
+                <div class="info-item">
+                    <span class="info-icon">📍</span>
+                    <span>Rua Professor José do Carmo Madureira, 92<br>Centro - Votorantim, SP</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📞</span>
+                    <span>(15) 99786-7112</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📧</span>
+                    <span>automecanicarg4@hotmail.com</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">⏰</span>
+                    <div>
+                        <div>Segunda a Sexta: 8h às 18h</div>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📱</span>
+                    <span>Instagram: @autorg4</span>
+                </div>
+            </div>
+            
+            <form class="contact-form">
+                <h3 style="color: #0066b3; margin-bottom: 1rem;">Solicite um Orçamento</h3>
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefone</label>
+                    <input type="tel" placeholder="(00) 00000-0000" required>
+                </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Serviço Desejado</label>
+                    <select required>
+                        <option value="">Selecione um serviço</option>
+                        <option>Manutenção Preventiva</option>
+                        <option>Mecânica Geral</option>
+                        <option>Troca de Óleo e Filtros</option>
+                        <option>Diagnóstico Eletrônico</option>
+                        <option>Suspensão e Freios</option>
+                        <option>Ar Condicionado</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mensagem</label>
+                    <textarea rows="4" placeholder="Descreva o problema ou serviço desejado"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitação</button>
+            </form>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://maps.google.com/maps?q=Rua%20Professor%20Jos%C3%A9%20do%20Carmo%20Madureira%2C%2092%20-%20Votorantim&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/autorg4" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+            <a href="https://wa.me/5515997867112" target="_blank" rel="noopener noreferrer" title="WhatsApp">💬</a>
+            <a href="https://search.google.com/local/reviews?placeid=ChIJtVELhguKxZQRSk8rJ2vRaxs" target="_blank" rel="noopener noreferrer" title="Google">🔍</a>
+        </div>
+        <p>© 2026 Auto Mecânica RG4. Todos os direitos reservados.</p>
+        <p>Desenvolvido com excelência para servir você melhor</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Formulário de contato
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aqui você pode adicionar integração com email ou WhatsApp
+            const nome = this.querySelector('input[type="text"]').value;
+            const telefone = this.querySelector('input[type="tel"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const servico = this.querySelector('select').value;
+            const mensagem = this.querySelector('textarea').value;
+            
+            // Exemplo: redirecionar para WhatsApp com mensagem pré-formatada
+            const whatsappMsg = `Olá! Meu nome é ${nome}.%0A%0AServiço: ${servico}%0ATelefone: ${telefone}%0AEmail: ${email}%0A%0AMensagem: ${mensagem}`;
+            const whatsappLink = `https://wa.me/5515997867112?text=${whatsappMsg}`;
+            
+            // Redirecionamento ATIVADO
+            window.open(whatsappLink, '_blank');
+            
+            // Apenas para feedback visual
+            // alert('Redirecionando para o WhatsApp...');
+            this.reset();
+        });
+
+        // Animação ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
