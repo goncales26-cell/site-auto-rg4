@@ -718,26 +718,32 @@
             });
         });
 
-        // Formulário de contato
+        // Formulário de contato COM MENSAGEM PERSONALIZADA
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Aqui você pode adicionar integração com email ou WhatsApp
+            // 1. Pega os valores
             const nome = this.querySelector('input[type="text"]').value;
             const telefone = this.querySelector('input[type="tel"]').value;
             const email = this.querySelector('input[type="email"]').value;
             const servico = this.querySelector('select').value;
             const mensagem = this.querySelector('textarea').value;
             
-            // Exemplo: redirecionar para WhatsApp com mensagem pré-formatada
-            const whatsappMsg = `Olá! Meu nome é ${nome}.%0A%0AServiço: ${servico}%0ATelefone: ${telefone}%0AEmail: ${email}%0A%0AMensagem: ${mensagem}`;
-            const whatsappLink = `https://wa.me/5515997867112?text=${whatsappMsg}`;
+            // 2. Monta a mensagem personalizada (ESTILO GTI)
+            let text = "*Olá! Vim pedir um orçamento através do website da Auto RG4* 🚗🔧\n\n";
+            text += "----------------------------------\n";
+            text += "*Nome:* " + nome + "\n";
+            text += "*Telefone:* " + telefone + "\n";
+            text += "*E-mail:* " + email + "\n";
+            text += "*Serviço:* " + servico + "\n";
+            text += "*Mensagem:* " + mensagem + "\n";
+            text += "----------------------------------";
+
+            // 3. Prepara o link e envia
+            const encodedText = encodeURIComponent(text);
+            const whatsappLink = `https://wa.me/5515997867112?text=${encodedText}`;
             
-            // Redirecionamento ATIVADO
             window.open(whatsappLink, '_blank');
-            
-            // Apenas para feedback visual
-            // alert('Redirecionando para o WhatsApp...');
             this.reset();
         });
 
