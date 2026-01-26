@@ -730,7 +730,7 @@
             const mensagem = this.querySelector('textarea').value;
             
             // 2. Monta a mensagem personalizada (ESTILO GTI)
-            let text = "*Olá! Vim pedir um orçamento através do website da Auto RG4* 🚗🔧\n\n";
+            let text = "*Olá! Vim pedir um orçamento através do website da Auto RG4* \uD83D\uDE97\uD83D\uDD27\n\n";
             text += "----------------------------------\n";
             text += "*Nome:* " + nome + "\n";
             text += "*Telefone:* " + telefone + "\n";
@@ -741,7 +741,7 @@
 
             // 3. Prepara o link e envia
             const encodedText = encodeURIComponent(text);
-            const whatsappLink = `https://wa.me/5515997867112?text=${encodedText}`;
+            const whatsappLink = `https://wa.me/5515991113095?text=${encodedText}`;
             
             window.open(whatsappLink, '_blank');
             this.reset();
@@ -771,3 +771,4 @@
     </script>
 </body>
 </html>
+
