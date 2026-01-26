@@ -718,7 +718,7 @@
             });
         });
 
-        // Formulário de contato COM MENSAGEM PERSONALIZADA
+        // Formulário de contato COM MENSAGEM PERSONALIZADA E EMOJIS CORRIGIDOS
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -729,7 +729,9 @@
             const servico = this.querySelector('select').value;
             const mensagem = this.querySelector('textarea').value;
             
-            // 2. Monta a mensagem personalizada (ESTILO GTI)
+            // 2. Monta a mensagem personalizada (Usando códigos Unicode para os emojis não quebrarem)
+            // \uD83D\uDE97 = Carro
+            // \uD83D\uDD27 = Chave Inglesa
             let text = "*Olá! Vim pedir um orçamento através do website da Auto RG4* \uD83D\uDE97\uD83D\uDD27\n\n";
             text += "----------------------------------\n";
             text += "*Nome:* " + nome + "\n";
@@ -741,7 +743,9 @@
 
             // 3. Prepara o link e envia
             const encodedText = encodeURIComponent(text);
-            const whatsappLink = `https://wa.me/5515991113095?text=${encodedText}`;
+            
+            // ATENÇÃO: Confirme se o número está certo aqui
+            const whatsappLink = `https://wa.me/5515997867112?text=${encodedText}`;
             
             window.open(whatsappLink, '_blank');
             this.reset();
@@ -771,4 +775,5 @@
     </script>
 </body>
 </html>
+
 
