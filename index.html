@@ -704,7 +704,7 @@
     </footer>
 
     <script>
-        // Smooth scrolling para links internos
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -718,7 +718,7 @@
             });
         });
 
-        // Formulário de contato COM MENSAGEM PERSONALIZADA E EMOJIS CORRIGIDOS
+        // Formulário de contato COM EMOJIS HEXADECIMAIS (À PROVA DE FALHA)
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -729,29 +729,35 @@
             const servico = this.querySelector('select').value;
             const mensagem = this.querySelector('textarea').value;
             
-            // 2. Monta a mensagem personalizada (Usando códigos Unicode para os emojis não quebrarem)
-            // \uD83D\uDE97 = Carro
-            // \uD83D\uDD27 = Chave Inglesa
-            let text = "*Olá! Vim pedir um orçamento através do website da Auto RG4* \uD83D\uDE97\uD83D\uDD27\n\n";
-            text += "----------------------------------\n";
-            text += "*Nome:* " + nome + "\n";
-            text += "*Telefone:* " + telefone + "\n";
-            text += "*E-mail:* " + email + "\n";
-            text += "*Serviço:* " + servico + "\n";
-            text += "*Mensagem:* " + mensagem + "\n";
-            text += "----------------------------------";
-
-            // 3. Prepara o link e envia
-            const encodedText = encodeURIComponent(text);
+            // 2. Prepara o Texto (SEM EMOJIS AQUI)
+            const parte1 = "*Olá! Vim pedir um orçamento através do website da Auto RG4* ";
             
-            // ATENÇÃO: Confirme se o número está certo aqui
-            const whatsappLink = `https://wa.me/5515997867112?text=${encodedText}`;
+            let parte2 = "\n\n----------------------------------\n";
+            parte2 += "*Nome:* " + nome + "\n";
+            parte2 += "*Telefone:* " + telefone + "\n";
+            parte2 += "*E-mail:* " + email + "\n";
+            parte2 += "*Serviço:* " + servico + "\n";
+            parte2 += "*Mensagem:* " + mensagem + "\n";
+            parte2 += "----------------------------------";
+
+            // 3. Codifica o texto para URL
+            const texto1Codificado = encodeURIComponent(parte1);
+            const texto2Codificado = encodeURIComponent(parte2);
+            
+            // 4. INSERE OS EMOJIS "NA MARRA" (Códigos Hexadecimais)
+            // %F0%9F%9A%97 = Carro 🚗
+            // %F0%9F%94%A7 = Chave 🔧
+            const emojisBlindados = "%F0%9F%9A%97%20%F0%9F%94%A7";
+
+            // 5. Monta o Link Final
+            // ATENÇÃO: Confirme se o número está certo aqui (seu número atual)
+            const whatsappLink = `https://wa.me/5515991113095?text=${texto1Codificado}${emojisBlindados}${texto2Codificado}`;
             
             window.open(whatsappLink, '_blank');
             this.reset();
         });
 
-        // Animação ao scroll
+        // Animação ao scroll (Mantida igual)
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -775,5 +781,6 @@
     </script>
 </body>
 </html>
+
 
 
