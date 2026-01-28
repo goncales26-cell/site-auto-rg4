@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Mecânica RG4 | Especialistas em Seu Carro</title>
-    <link rel="icon" type="image/png" href="https://i.imgur.com/sc5KPkR.png">
-    
+    <title>SOS English | Teacher Lourival Sampaio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇺🇸</text></svg>">
     <style>
         * {
             margin: 0;
@@ -17,19 +16,19 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
         }
 
-        /* Header */
+        /* Header - Azul Acadêmico */
         header {
-            background: #003366; /* Azul RG4 */
+            background: linear-gradient(135deg, #003366 0%, #004080 100%);
             color: white;
-            padding: 1rem 0;
+            padding: 0.5rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -42,14 +41,8 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            color: white;
-            text-transform: uppercase;
             display: flex;
             align-items: center;
-            gap: 10px;
         }
 
         .nav-links {
@@ -61,50 +54,57 @@
         .nav-links a {
             color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: opacity 0.3s;
             font-weight: 500;
-            text-transform: uppercase;
-            font-size: 0.9rem;
         }
 
         .nav-links a:hover {
-            color: #cc0000; /* Vermelho RG4 */
+            opacity: 0.8;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 160px 2rem 100px;
+            padding: 180px 2rem 120px;
             text-align: center;
+            margin-top: 0;
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            animation: fadeInUp 1s;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 15px 40px;
+            padding: 15px 35px;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
-            font-weight: bold;
-            text-transform: uppercase;
+            font-weight: 600;
         }
 
         .btn-primary {
@@ -113,10 +113,23 @@
         }
 
         .btn-primary:hover {
+            transform: translateY(-3px);
             background: #b30000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
-        /* Sections Generic */
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #003366;
+        }
+
+        /* Sections */
         section {
             padding: 80px 2rem;
             max-width: 1200px;
@@ -128,140 +141,148 @@
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: #003366;
-            text-transform: uppercase;
         }
 
-        /* Services Grid */
+        /* Services */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
         .service-card {
             background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             text-align: center;
-            border-bottom: 5px solid #cc0000;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #cc0000;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 51, 102, 0.15);
         }
 
         .service-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
             color: #003366;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
-        /* --- SEÇÃO NOTÍCIAS (CSS) --- */
-        .news-grid {
+        /* --- ESTILOS DA SEÇÃO HISTÓRIA --- */
+        .about-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .news-card {
-            background: white;
+        .timeline-item {
+            transition: transform 0.3s;
+            padding: 15px;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
         }
 
-        .news-card:hover {
+        .timeline-item:hover {
+            transform: translateX(10px);
+            background: #f0f4f8;
+        }
+
+        /* Efeito das Fotos Sobrepostas (Desktop) */
+        .about-image-container {
+            position: relative;
+            min-height: 400px;
+        }
+        
+        .photo-card {
+            position: relative;
+            z-index: 1;
+            width: 85%;
+        }
+
+        .photo-card-2 {
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+            width: 60%;
+            z-index: 2;
+            border: 8px solid white;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        /* --- ESTILOS DOS DEPOIMENTOS --- */
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            position: relative;
+            transition: transform 0.3s;
+            border-bottom: 4px solid #003366;
+        }
+
+        .testimonial-card:hover {
             transform: translateY(-5px);
         }
 
-        .news-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background-color: #ddd;
-        }
-
-        .news-content {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .news-date {
-            font-size: 0.8rem;
+        .quote-icon {
             color: #cc0000;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .news-title {
-            font-size: 1.1rem;
-            color: #003366;
+            font-size: 3rem;
+            line-height: 1;
             margin-bottom: 1rem;
-            line-height: 1.4;
-            font-weight: 700;
+            font-family: serif;
         }
 
-        .news-link {
-            margin-top: auto;
-            text-decoration: none;
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .student-info strong {
+            display: block;
             color: #003366;
-            font-weight: 600;
-            border: 2px solid #003366;
-            padding: 8px 15px;
-            text-align: center;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
+            font-size: 1.1rem;
         }
 
-        .news-link:hover {
-            background: #003366;
-            color: white;
+        .student-info span {
+            font-size: 0.9rem;
+            color: #888;
         }
 
         /* Contact Section */
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4rem;
-            justify-content: center;
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
         }
 
         .contact-info {
-            flex: 1;
-            min-width: 300px;
-            background: white;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            background: linear-gradient(135deg, #003366 0%, #004080 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 2rem;
         }
 
         .info-item {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
             font-size: 1.1rem;
-        }
-
-        .info-icon {
-            background: #003366;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            flex-shrink: 0;
         }
         
         .info-icon svg {
@@ -270,14 +291,53 @@
             fill: white;
         }
 
-        .info-item a, .info-item span {
-            color: #333;
+        .info-item a {
+            color: white;
             text-decoration: none;
-            font-weight: 500;
+            transition: opacity 0.3s;
         }
         
         .info-item a:hover {
-            color: #cc0000;
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            color: #003366;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #003366;
         }
 
         /* Footer */
@@ -285,209 +345,377 @@
             background: #111;
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
         }
 
-        /* --- BOTÃO FLUTUANTE --- */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 10000;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            text-decoration: none;
             display: flex;
             align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            animation: pulse-green 2s infinite;
         }
 
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
+        .social-links svg {
+            width: 28px;
+            height: 28px;
             fill: white;
+            transition: fill 0.3s;
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
+        .social-links a:hover svg {
+            fill: #cc0000;
         }
 
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
+        /* --- RESPONSIVE (CORREÇÃO DAS FOTOS AQUI) --- */
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero h1 { font-size: 2rem; }
-            .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
-            .whatsapp-float svg { width: 28px; height: 28px; }
+            .hero h1 { font-size: 2.2rem; }
+            .about-content, .contact-content { grid-template-columns: 1fr; }
+            
+            /* Ajuste mobile das fotos - SEM SOBREPOSIÇÃO */
+            .about-image-container {
+                min-height: auto;
+                margin-bottom: 3rem;
+                display: flex; /* Para alinhar centralizado */
+                flex-direction: column;
+                align-items: center;
+            }
+            .photo-card { 
+                width: 100%; 
+                /* Garante que o texto fique acima da segunda foto se precisar */
+                z-index: 2; 
+            }
+            .photo-card-2 {
+                position: relative;
+                bottom: 0;
+                right: 0;
+                width: 95%; /* Um pouco menor que a de cima */
+                /* Mudei de -40px para 20px positivo para dar espaço */
+                margin: 20px auto 0 auto; 
+                display: block;
+                z-index: 1;
+                /* Borda um pouco mais fina no mobile */
+                border: 4px solid white; 
+            }
+            
+            /* Ajuste fino no texto do selo para telas pequenas */
+            .photo-card div {
+                bottom: 15px;
+                left: -5px;
+                padding: 8px 15px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-
     <header>
         <nav>
             <div class="logo">
-                🚗 AUTO RG4
+                <img src="./logo.jpeg" alt="SOS English Logo" style="height: 70px; width: auto; border-radius: 5px;">
             </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#noticias">Notícias</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#metodologia">Como Funciona</a></li>
+                <li><a href="#sobre">Minha História</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Agendar Aula</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero" id="inicio">
-        <h1>Qualidade e Confiança<br>para o seu Veículo</h1>
-        <p>Mecânica, Elétrica e Manutenção com quem entende do assunto.</p>
-        <a href="https://wa.me/5515991113095" target="_blank" class="btn btn-primary">Agendar Revisão</a>
+        <h1>Da Maratona à Fluência 🏃‍♂️🇺🇸</h1>
+        <p>Aprenda inglês com a mesma disciplina de um campeão. Aulas particulares focadas em destravar sua fala e sua carreira.</p>
+        <div class="cta-buttons">
+            <a href="#contato" class="btn btn-primary">Agendar Aula Experimental</a>
+            <a href="#sobre" class="btn btn-secondary">Conheça Minha História</a>
+        </div>
     </section>
 
-    <section id="servicos">
-        <h2>Nossos Serviços</h2>
+    <section id="metodologia">
+        <h2>Como posso te ajudar?</h2>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🔧</div>
-                <h3>Mecânica Geral</h3>
-                <p>Manutenção preventiva e corretiva, suspensão, freios e motor.</p>
+                <div class="service-icon">🗣️</div>
+                <h3>Conversação & Fluência</h3>
+                <p>Perca o medo de falar. Aulas dinâmicas focadas em destravar sua fala desde o primeiro dia.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">⚡</div>
-                <h3>Elétrica Automotiva</h3>
-                <p>Diagnóstico computadorizado, bateria, alternador e iluminação.</p>
+                <div class="service-icon">💼</div>
+                <h3>Business English</h3>
+                <p>Inglês para o mercado de trabalho. Prepare-se para entrevistas, reuniões e apresentações.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">❄️</div>
-                <h3>Ar Condicionado</h3>
-                <p>Higienização, carga de gás e manutenção do sistema.</p>
+                <div class="service-icon">✈️</div>
+                <h3>Inglês para Viagens</h3>
+                <p>Vai viajar? Aprenda o essencial para passar pela imigração, hotel e restaurantes sem sufoco.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h3>Mentoria Personalizada</h3>
+                <p>Não é só aula. É um acompanhamento focado no seu objetivo, seja passar no TOEFL ou morar fora.</p>
             </div>
         </div>
     </section>
 
     <section id="sobre" style="background: white;">
-        <h2>Sobre a Auto RG4</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #555;">
-            Com anos de experiência no mercado, a Auto Mecânica RG4 se destaca pela transparência e qualidade técnica. Nossa missão é garantir a segurança da sua família e o desempenho do seu carro, utilizando peças de primeira linha e equipamentos modernos.
-        </p>
-    </section>
+        <div class="about-content">
+            
+            <div class="about-image-container">
+                <div class="photo-card">
+                    <img src="./maratona.jpeg" alt="Lourival Sampaio na Maratona" style="width: 100%; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); filter: grayscale(20%) contrast(1.1);">
+                    <div style="position: absolute; bottom: 20px; left: -10px; background: #cc0000; color: white; padding: 10px 20px; font-weight: bold; font-size: 0.9rem; border-radius: 5px; box-shadow: 5px 5px 15px rgba(0,0,0,0.2);">
+                        🏆 Campeão Maratona SP
+                    </div>
+                </div>
+                
+                <div class="photo-card-2">
+                    <img src="./professor.jpeg" alt="Professor Lourival Sampaio" style="width: 100%; border-radius: 10px; border: 8px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                </div>
+            </div>
 
-    <section id="noticias" style="background-color: #f4f4f4; padding: 4rem 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center; color: #003366; margin-bottom: 2rem;">
-                Últimas do Mundo Automotivo 🚗
-            </h2>
-            <p style="text-align: center; color: #666; margin-top: -1.5rem; margin-bottom: 3rem;">
-                Fique por dentro das novidades enquanto cuidamos do seu carro.
-            </p>
+            <div class="about-text">
+                <span style="color: #cc0000; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem;">Minha Trajetória</span>
+                <h2 style="text-align: left; margin-bottom: 1.5rem; line-height: 1.2;">De Maratonista a Professor.<br>Uma vida de disciplina.</h2>
+                
+                <p style="font-size: 1.1rem; color: #555; margin-bottom: 1.5rem;">
+                    "Meu pai me disse uma vez: <em>'Meu filho, o esporte vai abrir portas onde seu nome ainda não chega'</em>. Ele estava certo."
+                </p>
 
-            <div id="news-container" class="news-grid">
-                <p style="text-align: center; width: 100%; color: #888;">Carregando notícias...</p>
+                <div class="timeline-item" style="border-left: 3px solid #003366; margin-bottom: 1.5rem; padding-left: 15px;">
+                    <strong style="color: #003366; display: block; margin-bottom: 5px;">A Corrida pela Vida</strong>
+                    <p style="font-size: 0.95rem;">
+                        Nasci com um sonho: aprender inglês nos EUA. Sem dinheiro, descobri que a Maratona de SP dava uma viagem como prêmio. Treinei 160km por semana, venci a prova e embarquei com <strong>US$ 200 no bolso</strong>.
+                    </p>
+                </div>
+
+                <div class="timeline-item" style="border-left: 3px solid #cc0000; margin-bottom: 1.5rem; padding-left: 15px;">
+                    <strong style="color: #cc0000; display: block; margin-bottom: 5px;">O Sonho Americano</strong>
+                    <p style="font-size: 0.95rem;">
+                        Nos EUA, lavei carros e pratos, mas mantive a disciplina de atleta. Estudava inglês dia e noite até atingir a fluência e me tornar referência no ensino.
+                    </p>
+                </div>
+
+                <p style="font-weight: 600; color: #333; font-size: 1.1rem; margin-top: 1rem;">
+                    Hoje, uso a mesma garra das pistas para fazer você cruzar a linha de chegada da fluência.
+                </p>
+
+                <a href="#contato" class="btn btn-primary" style="margin-top: 1.5rem;">Quero Treinar com um Campeão 🚀</a>
             </div>
         </div>
     </section>
 
-    <section id="contato" style="background: white;">
-        <h2>Fale Conosco</h2>
-        <div class="contact-container">
+    <section id="depoimentos" style="background-color: #f0f4f8;">
+        <h2>Histórias de Sucesso 💬</h2>
+        <p style="text-align: center; max-width: 700px; margin: -20px auto 40px auto; color: #666;">
+            Não acredite apenas na minha palavra. Veja o que meus alunos conquistaram com o método.
+        </p>
+
+        <div class="services-grid">
+            <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                    "Eu travava sempre que precisava falar inglês no trabalho. Com 3 meses de aula com o Teacher Lourival, consegui conduzir minha primeira reunião com a diretoria global. A didática dele é direta e sem enrolação."
+                </p>
+                <div class="student-info">
+                    <strong>Ricardo Mendes</strong>
+                    <span>Gerente de Projetos (Business English)</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                    "Sempre achei que nunca aprenderia depois de velha. O Lourival tem uma paciência incrível e o método da maratona faz todo sentido: disciplina e constância. Hoje viajo sozinha sem medo!"
+                </p>
+                <div class="student-info">
+                    <strong>Sônia Andrade</strong>
+                    <span>Aposentada (Inglês para Viagens)</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote-icon">❝</div>
+                <p class="testimonial-text">
+                    "Precisava de nota 90 no TOEFL para meu mestrado no Canadá. As aulas foram focadas exatamente nas minhas dificuldades. Passei de primeira! O melhor investimento que fiz."
+                </p>
+                <div class="student-info">
+                    <strong>Lucas Ferreira</strong>
+                    <span>Aprovado no TOEFL/Mestrado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Comece Agora</h2>
+        <div class="contact-content">
             <div class="contact-info">
+                <h3>Entre em Contato</h3>
+                <p style="margin-bottom: 20px; color: #eee;">Preencha o formulário para agendar sua aula ou tirar dúvidas.</p>
+                
                 <div class="info-item">
                     <span class="info-icon">📍</span>
-                    <span>
-                        <strong>Auto Mecânica RG4</strong><br>
-                        Sorocaba - SP
-                    </span>
+                    <span>Atendimento Online para todo o Brasil</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📱</span>
+                    <span>(15) 98179-3811</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">📧</span>
+                    <span>contato@sosenglish.com.br</span>
                 </div>
                 
                 <div class="info-item">
-                    <span class="info-icon">📱</span>
-                    <span>(15) 99111-3095</span>
+                    <span class="info-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </span>
+                    <a href="https://www.youtube.com/@lourivalsampaio" target="_blank">Canal: @lourivalsampaio</a>
                 </div>
 
                 <div class="info-item">
                     <span class="info-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </span>
-                    <a href="https://wa.me/5515991113095" target="_blank">Chamar no WhatsApp</a>
-                </div>
-
-                <div class="info-item">
-                    <span class="info-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
-                    </span>
-                    <a href="https://www.instagram.com/automecanicarg4" target="_blank">@automecanicarg4</a>
-                </div>
-
-                <div class="info-item">
-                    <span class="info-icon">✉️</span>
-                    <span>automecanicarg4@gmail.com</span>
+                    <span>Instagram: @seuwinstagram</span>
                 </div>
             </div>
+            
+            <form class="contact-form">
+                <h3 style="color: #003366; margin-bottom: 1rem;">Solicitar Informações</h3>
+                
+                <div class="form-group">
+                    <label>Seu Nome</label>
+                    <input type="text" id="nome" placeholder="Como você se chama?" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Seu WhatsApp</label>
+                    <input type="tel" id="telefone" placeholder="(DDD) 99999-9999" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Qual seu principal objetivo?</label>
+                    <input type="text" id="objetivo" placeholder="Ex: Trabalho, Viagem, Hobbies..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Seu nível atual de Inglês</label>
+                    <select id="nivel" required>
+                        <option value="">Selecione uma opção</option>
+                        <option>Básico (Nunca estudei)</option>
+                        <option>Básico (Já estudei um pouco)</option>
+                        <option>Intermediário</option>
+                        <option>Avançado</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Mensagem (Opcional)</label>
+                    <textarea id="mensagem" rows="3" placeholder="Tem alguma dúvida específica?"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar no WhatsApp 🚀</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Auto Mecânica RG4. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@lourivalsampaio" target="_blank" title="Canal do YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+
+            <a href="#" target="_blank" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            
+            <a href="https://wa.me/5515981793811" target="_blank" title="WhatsApp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </a>
+        </div>
+        <p>© 2026 SOS English - Teacher Lourival. Todos os direitos reservados.</p>
         <p style="font-size: 0.8rem; margin-top: 10px; color: #666;">Desenvolvido por GTI Tecnologia</p>
     </footer>
 
-    <a href="https://wa.me/5515991113095?text=Ol%C3%A1%20Auto%20RG4!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." 
-       class="whatsapp-float" 
-       target="_blank"
-       title="Falar no WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-    </a>
-
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://motor1.uol.com.br/rss/news/all/';
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
 
-            fetch(rssUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const container = document.getElementById('news-container');
-                    
-                    if(data.status === 'ok' && data.items.length > 0) {
-                        container.innerHTML = '';
-                        const latestNews = data.items.slice(0, 3);
+        // ENVIO WHATSAPP COM NÚMERO REAL
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const objetivo = document.getElementById('objetivo').value;
+            const nivel = document.getElementById('nivel').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            const parte1 = "*Olá Teacher Lourival! Vim pelo site SOS English e gostaria de saber sobre as aulas* ";
+            
+            let parte2 = "\n\n----------------------------------\n";
+            parte2 += "*Nome:* " + nome + "\n";
+            parte2 += "*Telefone:* " + telefone + "\n";
+            parte2 += "*Objetivo:* " + objetivo + "\n";
+            parte2 += "*Nível:* " + nivel + "\n";
+            
+            if(mensagem) {
+                parte2 += "*Mensagem:* " + mensagem + "\n";
+            }
+            parte2 += "----------------------------------";
 
-                        latestNews.forEach(item => {
-                            const image = item.enclosure.link ? item.enclosure.link : 'https://i.imgur.com/sc5KPkR.png';
-                            const date = new Date(item.pubDate).toLocaleDateString('pt-BR');
+            const texto1Codificado = encodeURIComponent(parte1);
+            const texto2Codificado = encodeURIComponent(parte2);
+            const emojisBlindados = "%F0%9F%93%9A%20%F0%9F%87%BA%F0%9F%87%B8"; 
 
-                            const cardHTML = `
-                                <article class="news-card">
-                                    <img src="${image}" alt="${item.title}" class="news-image" onerror="this.src='https://via.placeholder.com/400x200?text=Auto+RG4'">
-                                    <div class="news-content">
-                                        <span class="news-date">${date}</span>
-                                        <h3 class="news-title">${item.title}</h3>
-                                        <a href="${item.link}" target="_blank" class="news-link">Ler Matéria Completa</a>
-                                    </div>
-                                </article>
-                            `;
-                            container.innerHTML += cardHTML;
-                        });
-                    } else {
-                        container.innerHTML = '<p>Não foi possível carregar as notícias no momento.</p>';
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro ao buscar notícias:', error);
-                    document.getElementById('news-container').innerHTML = '<p style="text-align:center;">Notícias indisponíveis no momento.</p>';
-                });
+            // NÚMERO (15 981793811)
+            const whatsappLink = `https://wa.me/5515981793811?text=${texto1Codificado}${emojisBlindados}${texto2Codificado}`;
+            
+            window.open(whatsappLink, '_blank');
+            this.reset();
+        });
+
+        // Animação Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.service-card, .photo-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
         });
     </script>
 </body>
