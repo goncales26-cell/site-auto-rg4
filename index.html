@@ -692,7 +692,137 @@
             </iframe>
         </div>
     </section>
+<section id="noticias" style="background-color: #f4f4f4; padding: 4rem 2rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; color: #003366; margin-bottom: 2rem;">
+                Últimas do Mundo Automotivo 🚗
+            </h2>
+            <p style="text-align: center; color: #666; margin-top: -1.5rem; margin-bottom: 3rem;">
+                Fique por dentro das novidades enquanto cuidamos do seu carro.
+            </p>
 
+            <div id="news-container" class="news-grid">
+                <p style="text-align: center; width: 100%; color: #888;">Carregando notícias...</p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* CSS Específico das Notícias */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .news-date {
+            font-size: 0.8rem;
+            color: #cc0000; /* Vermelho RG4 */
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            color: #003366; /* Azul RG4 */
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        .news-link {
+            margin-top: auto;
+            text-decoration: none;
+            color: #003366;
+            font-weight: 600;
+            border: 2px solid #003366;
+            padding: 8px 15px;
+            text-align: center;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .news-link:hover {
+            background: #003366;
+            color: white;
+        }
+    </style>
+
+    <script>
+        // LÓGICA PARA PUXAR AS NOTÍCIAS (USANDO MOTOR1 BRASIL)
+        document.addEventListener("DOMContentLoaded", function() {
+            // URL do Feed RSS do Motor1 Brasil convertido para JSON
+            const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://motor1.uol.com.br/rss/news/all/';
+
+            fetch(rssUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('news-container');
+                    
+                    if(data.status === 'ok' && data.items.length > 0) {
+                        container.innerHTML = ''; // Limpa o "Carregando..."
+                        
+                        // Pega apenas as 3 últimas notícias para não poluir
+                        const latestNews = data.items.slice(0, 3);
+
+                        latestNews.forEach(item => {
+                            // Tenta pegar imagem do thumbnail ou uma padrão
+                            const image = item.enclosure.link ? item.enclosure.link : 'https://i.imgur.com/sc5KPkR.png'; // Fallback logo RG4
+                            
+                            // Formata a data
+                            const date = new Date(item.pubDate).toLocaleDateString('pt-BR');
+
+                            const cardHTML = `
+                                <article class="news-card">
+                                    <img src="${image}" alt="${item.title}" class="news-image" onerror="this.src='https://via.placeholder.com/400x200?text=Auto+RG4'">
+                                    <div class="news-content">
+                                        <span class="news-date">${date}</span>
+                                        <h3 class="news-title">${item.title}</h3>
+                                        <a href="${item.link}" target="_blank" class="news-link">Ler Matéria Completa</a>
+                                    </div>
+                                </article>
+                            `;
+                            container.innerHTML += cardHTML;
+                        });
+                    } else {
+                        container.innerHTML = '<p>Não foi possível carregar as notícias no momento.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar notícias:', error);
+                    document.getElementById('news-container').innerHTML = '<p style="text-align:center;">As notícias estão em manutenção.</p>';
+                });
+        });
+    </script>
     <footer>
         <div class="social-links">
             <a href="https://instagram.com/autorg4" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
@@ -781,6 +911,7 @@
     </script>
 </body>
 </html>
+
 
 
 
