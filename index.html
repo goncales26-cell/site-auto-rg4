@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Mecânica RG4 | Oficina de Confiança em Votorantim</title>
+    <title>Auto Mecânica RG4 | Oficina em Votorantim e Sorocaba</title>
     <link rel="icon" type="image/png" href="https://i.imgur.com/sc5KPkR.png">
 
-    <meta name="description" content="Oficina Mecânica em Votorantim com 16 anos de tradição. Destaque no Sorocabanices! Especialistas em injeção eletrônica, revisão geral, freios e suspensão.">
-    <meta name="keywords" content="mecânica votorantim, oficina sorocaba, revisão automotiva, troca de óleo, suspensão, freios, auto elétrica, RG4, Robson Gonçales, Sorocabanices">
+    <meta name="description" content="Auto Mecânica RG4. Oficina referência em Votorantim e Sorocaba. Destaque no Sorocabanices! Especialistas em injeção, revisão e freios.">
+    <meta name="keywords" content="mecânica votorantim, oficina sorocaba, revisão automotiva, troca de óleo, sorocabanices, vídeo viral rg4, suspensão, freios, auto elétrica">
     <meta name="author" content="GTI Tecnologia">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="Auto Mecânica RG4 | Sua Oficina de Confiança">
-    <meta property="og:description" content="A oficina destaque no Sorocabanices! +220k visualizações. Diagnóstico preciso e honestidade.">
+    
+    <meta property="og:title" content="Auto Mecânica RG4 | Votorantim e Sorocaba">
+    <meta property="og:description" content="A oficina destaque no Sorocabanices! +220k visualizações. Venha conferir por que somos referência.">
     <meta property="og:image" content="https://i.imgur.com/sc5KPkR.png">
     <meta property="og:url" content="https://autorg4.com.br">
     <meta property="og:type" content="website">
@@ -44,14 +43,15 @@
         .btn-secondary { background: transparent; color: white; border: 2px solid white; }
         .btn-secondary:hover { background: white; color: #0066b3; }
 
-        /* --- SESSÃO DE AUTORIDADE --- */
+        /* --- SESSÃO DE AUTORIDADE (CORRIGIDA - TEXTO BRANCO) --- */
         .stats-container { background-color: #004d87; padding: 40px 20px; color: white; margin-top: -5px; position: relative; z-index: 10; }
         .stats-grid { display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; gap: 20px; }
         .stat-item { text-align: center; }
         .stat-number { display: block; font-size: 2.2rem; font-weight: 800; color: #fff; }
-        .stat-text { font-size: 1rem; color: #ccc; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        /* CORRIGIDO AQUI: Cor branca (#fff) para maior destaque */
+        .stat-text { font-size: 1rem; color: #fff; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; opacity: 0.9; }
 
-        /* --- SESSÃO VIRAL (SOROCABANICES) - NOVO CSS --- */
+        /* --- SESSÃO VIRAL (SOROCABANICES) --- */
         .viral-section { background: linear-gradient(to right, #003366, #004d87); padding: 80px 20px; color: white; border-top: 1px solid rgba(255,255,255,0.1); }
         .viral-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .viral-content h2 { text-align: left; color: white; margin-bottom: 0.5rem; font-size: 2.2rem; }
@@ -99,7 +99,7 @@
         .about-text li:before { content: "✓"; position: absolute; left: 0; color: #0066b3; font-weight: bold; font-size: 1.2rem; }
         .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
-        /* --- HISTÓRIA --- */
+        /* --- HISTÓRIA (COM CORREÇÃO DA FOTO P&B) --- */
         .history-section { background-color: #f8f9fa; width: 100%; max-width: 100%; padding: 80px 0; }
         .history-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .history-text h3 { color: #0066b3; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; font-weight: 700; }
@@ -107,8 +107,18 @@
         .history-stats { display: flex; gap: 3rem; margin-top: 2rem; }
         .stat-item strong { display: block; font-size: 2.5rem; color: #0066b3; font-weight: 900; }
         .stat-item span { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #666; font-weight: 600; }
-        .history-image img { width: 100%; border-radius: 15px; box-shadow: 20px 20px 0px rgba(0, 102, 179, 0.1); transition: transform 0.3s; filter: grayscale(100%); }
-        .history-image:hover img { filter: grayscale(0%); transform: scale(1.02); }
+        
+        .history-image img { 
+            width: 100%; 
+            border-radius: 15px; 
+            box-shadow: 20px 20px 0px rgba(0, 102, 179, 0.1); 
+            transition: transform 0.3s, filter 0.3s; 
+            filter: grayscale(100%); /* Efeito Preto e Branco */
+        }
+        .history-image:hover img { 
+            filter: grayscale(0%); /* Fica colorido ao passar o mouse */
+            transform: scale(1.02); 
+        }
 
         /* --- NOTÍCIAS --- */
         .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
@@ -150,7 +160,6 @@
         /* --- FOOTER --- */
         footer { background: #1a1a1a; color: white; text-align: center; padding: 2rem; }
         .social-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
-        .social-links a { color: white; font-size: 1.5rem; transition: color 0.3s; text-decoration: none; }
         .social-links svg { width: 28px; height: 28px; fill: white; transition: fill 0.3s; }
         .social-links a:hover svg { fill: #0066b3; }
 
@@ -164,10 +173,10 @@
         @media (max-width: 768px) {
             .nav-links { display: none; }
             .hero h1 { font-size: 2rem; }
-            .about-content, .contact-content, .history-container, .news-grid, .services-grid, .reviews-grid, .process-grid, .viral-container { grid-template-columns: 1fr; }
-            .history-image { order: -1; margin-bottom: 2rem; }
+            .viral-container, .about-content, .contact-content, .history-container, .services-grid, .reviews-grid, .process-grid, .news-grid { grid-template-columns: 1fr; }
             .viral-video-wrapper { margin-bottom: 30px; }
             .viral-content h2 { text-align: center; }
+            .history-image { order: -1; margin-bottom: 2rem; }
             h2 { font-size: 2rem; }
             .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
             .whatsapp-float svg { width: 28px; height: 28px; }
@@ -197,10 +206,10 @@
 
     <section class="hero" id="inicio">
         <h1>Auto Mecânica RG4</h1>
-        <p>A Oficina de Confiança em Votorantim. Desde 2009 cuidando do seu carro.</p>
+        <p>Sua Oficina de Confiança em Votorantim e Sorocaba. Desde 2009 cuidando do seu carro.</p>
         <div class="cta-buttons">
             <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
-            <a href="https://wa.me/5515991113095" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://wa.me/5515991113095" class="btn btn-secondary" target="_blank">WhatsApp</a>
         </div>
     </section>
 
@@ -249,15 +258,19 @@
                     </div>
                     <div class="comment-bubble">
                         <strong>@gilmar.jr88</strong>
-                        <p>"São sensacionais essas pessoas, essa família. Oficina de qualidade top, recomendo!" 🔧🚗</p>
+                        <p>"São sensacionais essas pessoas, essa família. Oficina de qualidade top, recomendo! 🔧🚗"</p>
                     </div>
                     <div class="comment-bubble">
                         <strong>@mainerosa</strong>
                         <p>"Dona Isabel e seu Robson são uns queridos!! ❤️ Oficina com excelentes profissionais e muito capacitados."</p>
                     </div>
+                    <div class="comment-bubble">
+                        <strong>@bianca.rochxa</strong>
+                        <p>"Sr. Robson excelente profissional, muito educado e honesto, e dona Isabel um amor de pessoa! Casal querido e abençoado! ❤️🙌"</p>
+                    </div>
                 </div>
                 
-                <a href="https://www.instagram.com/autorg4" target="_blank" class="btn btn-primary" style="margin-top: 30px; display: inline-block;">Ver mais no Instagram 📸</a>
+                <a href="https://www.instagram.com/autorg4" target="_blank" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Ver mais no Instagram 📸</a>
             </div>
         </div>
     </section>
@@ -300,11 +313,11 @@
 
     <section class="process-section" id="processo">
         <h2>Como é o Nosso Atendimento?</h2>
-        <div class="process-grid" style="max-width: 1200px; margin: 0 auto;">
+        <div class="process-grid">
             <div class="process-card">
                 <div class="process-num">1</div>
                 <h3>Agendamento</h3>
-                <p>Você agenda pelo WhatsApp e traz o carro. Sem filas, sem demora.</p>
+                <p>Você agenda pelo WhatsApp e traz o carro. Atendemos Votorantim e Sorocaba sem filas.</p>
             </div>
             <div class="process-card">
                 <div class="process-num">2</div>
@@ -329,7 +342,7 @@
         <div class="about-content">
             <div class="about-text">
                 <h3>Honestidade em Primeiro Lugar</h3>
-                <p>A Auto Mecânica RG4 nasceu do sonho do Sr. Robson em oferecer um serviço justo e tecnicamente impecável em Votorantim. Diferente de oficinas que "empurram serviços", aqui você só paga pelo que seu carro realmente precisa.</p>
+                <p>A Auto Mecânica RG4 nasceu do sonho do Sr. Robson em oferecer um serviço justo e tecnicamente impecável em Votorantim e Sorocaba. Diferente de oficinas que "empurram serviços", aqui você só paga pelo que seu carro realmente precisa.</p>
                 <ul>
                     <li>Fundada em 14 de Fevereiro de 2009</li>
                     <li>Liderada por Especialista Chevrolet (+36 anos de casa)</li>
@@ -338,7 +351,7 @@
                 </ul>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600" alt="Oficina RG4" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600" alt="Oficina RG4">
             </div>
         </div>
     </section>
@@ -354,7 +367,7 @@
             
             <div class="history-text">
                 <h3>Nossa Origem</h3>
-                <h2 style="color: #333; margin-bottom: 1.5rem; text-align: left;">De um sonho na garagem à referência em Votorantim</h2>
+                <h2 style="color: #333; margin-bottom: 1.5rem; text-align: left;">De um sonho na garagem à referência em Votorantim e Sorocaba</h2>
                 
                 <p>O Sr. <strong>Robson Gonçales</strong> dedicou 36 anos de sua vida às concessionárias Chevrolet. Ao se aposentar, vendeu seu próprio carro para comprar ferramentas e abrir a RG4.</p>
                 
@@ -391,7 +404,7 @@
     <section class="testimonials" id="avaliacoes">
         <h2>O que dizem nossos clientes</h2>
         
-        <div class="reviews-grid" style="max-width: 1000px; margin: 0 auto 30px auto; padding: 0 20px;">
+        <div class="reviews-grid">
             <div class="review-card">
                 <div class="review-header">
                     <div class="review-avatar">C</div>
@@ -404,7 +417,7 @@
                     <div class="review-avatar">M</div>
                     <div><strong>Mariana Souza</strong><div class="stars">⭐⭐⭐⭐⭐</div></div>
                 </div>
-                <p class="review-text">"Atendimento excelente. Explicaram tudo o que estava acontecendo com meu carro e o preço foi muito justo."</p>
+                <p class="review-text">"Sou de Sorocaba e venho até aqui pelo atendimento. Explicaram tudo o que estava acontecendo com meu carro e o preço foi muito justo."</p>
             </div>
             <div class="review-card">
                 <div class="review-header">
@@ -426,7 +439,7 @@
              <iframe 
                 src="https://maps.google.com/maps?q=Rua%20Professor%20Jos%C3%A9%20do%20Carmo%20Madureira%2C%2092%20-%20Votorantim&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
-                height="450" 
+                height="300" 
                 style="border:0; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);" 
                 allowfullscreen="" 
                 loading="lazy" 
@@ -452,17 +465,21 @@
                     </span>
                     <a href="https://wa.me/5515991113095" target="_blank" style="color: white; font-weight: bold;">(15) 99111-3095</a>
                 </div>
-
                 <div class="info-item">
-                    <span class="info-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
-                    </span>
-                    <a href="https://instagram.com/autorg4" target="_blank">@autorg4</a>
+                    <span class="info-icon">📧</span>
+                    <span>automecanicarg4@hotmail.com</span>
                 </div>
-
-                <div class="info-item">
-                    <span class="info-icon">⏰</span>
-                    <div>Segunda a Sexta: 8h às 18h</div>
+                
+                <div class="map-container" style="margin-top: 25px; border-radius: 10px; overflow: hidden; height: 200px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Rua%20Professor%20Jos%C3%A9%20do%20Carmo%20Madureira%2C%2092%20-%20Votorantim&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
             
@@ -483,18 +500,16 @@
                         <option>Manutenção Preventiva</option>
                         <option>Mecânica Geral</option>
                         <option>Troca de Óleo</option>
-                        <option>Diagnóstico (Luz no Painel)</option>
+                        <option>Diagnóstico Eletrônico</option>
+                        <option>Suspensão e Freios</option>
                         <option>Outro</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Mensagem</label>
-                    <textarea rows="4" placeholder="Descreva o problema do carro"></textarea>
+                    <textarea rows="4" placeholder="Descreva o problema"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar via WhatsApp</button>
-                <p style="font-size: 0.8rem; color: #666; margin-top: 10px; text-align: center;">
-                    🔒 Seus dados estão seguros.
-                </p>
             </form>
         </div>
     </section>
@@ -512,11 +527,8 @@
 
     <footer>
         <div class="social-links">
-            <a href="https://instagram.com/autorg4" target="_blank" rel="noopener noreferrer" title="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
-            </a>
-            <a href="https://wa.me/5515991113095" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <a href="https://instagram.com/autorg4" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
+            <a href="https://wa.me/5515991113095" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
 
     <script>
@@ -525,10 +537,7 @@
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
                 });
             });
 
@@ -537,7 +546,6 @@
             if(form){
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    
                     const nome = this.querySelector('input[type="text"]').value;
                     const telefone = this.querySelector('input[type="tel"]').value;
                     const servico = this.querySelector('select').value;
@@ -552,9 +560,7 @@
                     text += "----------------------------------";
 
                     const encodedText = encodeURIComponent(text);
-                    const whatsappLink = `https://wa.me/5515991113095?text=${encodedText}`;
-                    
-                    window.open(whatsappLink, '_blank');
+                    window.open(`https://wa.me/5515991113095?text=${encodedText}`, '_blank');
                     this.reset();
                 });
             }
@@ -569,7 +575,7 @@
                 });
             }, { threshold: 0.1 });
 
-            document.querySelectorAll('.service-card, .news-card, .process-card, .review-card, .comment-bubble').forEach(el => {
+            document.querySelectorAll('.service-card, .comment-bubble, .process-card').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
