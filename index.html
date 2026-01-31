@@ -3,595 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Mecânica RG4 - Serviços Automotivos de Qualidade</title>
+    <title>Auto Mecânica RG4 | Oficina em Votorantim e Sorocaba</title>
     <link rel="icon" type="image/png" href="https://i.imgur.com/sc5KPkR.png">
 
-    <meta name="description" content="Auto Mecânica RG4 em Votorantim. Especialistas em mecânica geral, injeção eletrônica, suspensão e freios. Agende seu orçamento pelo WhatsApp!">
-    <meta name="keywords" content="mecânica, oficina, votorantim, sorocaba, suspensão, freios, troca de óleo, RG4">
+    <meta name="description" content="Auto Mecânica RG4. Oficina referência em Votorantim e Sorocaba. Destaque no Sorocabanices! Especialistas em injeção, revisão e freios.">
+    <meta name="keywords" content="mecânica votorantim, oficina sorocaba, revisão automotiva, troca de óleo, sorocabanices, vídeo viral rg4, suspensão, freios">
     <meta name="author" content="GTI Tecnologia">
-
-    <meta property="og:title" content="Auto Mecânica RG4 | Votorantim - SP">
-    <meta property="og:description" content="Oficina de confiança com serviços de qualidade. Peça seu orçamento online agora mesmo!">
+    
+    <meta property="og:title" content="Auto Mecânica RG4 | Votorantim e Sorocaba">
+    <meta property="og:description" content="A oficina destaque no Sorocabanices! +220k visualizações. Venha conferir por que somos referência.">
     <meta property="og:image" content="https://i.imgur.com/sc5KPkR.png">
     <meta property="og:url" content="https://autorg4.com.br">
     <meta property="og:type" content="website">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; }
 
         /* Header */
-        header {
-            background: linear-gradient(135deg, #0066b3 0%, #004d87 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+        header { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo img { height: 45px; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: white; text-decoration: none; transition: opacity 0.3s; font-weight: 500; }
+        .nav-links a:hover { opacity: 0.8; }
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 45px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0066b3 0%, #004d87 100%);
-            color: white;
-            padding: 150px 2rem 100px;
-            text-align: center;
-            margin-top: 70px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 35px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: 600;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #0066b3;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: #0066b3;
-        }
-
-        /* Sections */
-        section {
-            padding: 80px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #0066b3;
-        }
-
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,102,179,0.2);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #0066b3;
-        }
-
-        .service-card h3 {
-            color: #0066b3;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        /* About */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            color: #0066b3;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-
-        .about-text ul {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .about-text li {
-            padding: 0.5rem 0;
-            padding-left: 2rem;
-            position: relative;
-        }
-
-        .about-text li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #0066b3;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* History Section */
-        .history-section {
-            background-color: #f8f9fa;
-            width: 100%;
-            max-width: 100%;
-            padding: 80px 0;
-        }
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 160px 2rem 100px; text-align: center; margin-top: 0; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; animation: fadeInUp 1s; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         
-        .history-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
+        .btn { padding: 15px 35px; border: none; border-radius: 50px; font-size: 1.1rem; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-block; font-weight: 600; }
+        .btn-primary { background: white; color: #0066b3; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn-secondary:hover { background: white; color: #0066b3; }
 
-        .history-text h3 {
-            color: #0066b3;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
+        /* Stats Authority */
+        .stats-container { background-color: #004d87; padding: 40px 20px; color: white; margin-top: -5px; position: relative; z-index: 10; }
+        .stats-grid { display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; gap: 20px; }
+        .stat-item { text-align: center; }
+        .stat-number { display: block; font-size: 2.2rem; font-weight: 800; color: #fff; }
+        .stat-text { font-size: 1rem; color: #ccc; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
-        .history-highlight {
-            border-left: 5px solid #0066b3;
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            font-style: italic;
-            color: #555;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 0 10px 10px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .history-stats {
-            display: flex;
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .stat-item strong {
-            display: block;
-            font-size: 2.5rem;
-            color: #0066b3;
-            font-weight: 900;
-        }
-
-        .stat-item span {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #666;
-            font-weight: 600;
-        }
-
-        .history-image img {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 20px 20px 0px rgba(0, 102, 179, 0.1);
-            transition: transform 0.3s;
-            filter: grayscale(100%);
-        }
+        /* --- SESSÃO VIRAL (SOROCABANICES) --- */
+        .viral-section { background: linear-gradient(to right, #003366, #004d87); padding: 80px 20px; color: white; border-top: 1px solid rgba(255,255,255,0.1); }
+        .viral-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .viral-content h2 { text-align: left; color: white; margin-bottom: 0.5rem; font-size: 2.2rem; }
+        .viral-content p { color: #e0e0e0; font-size: 1.1rem; margin-bottom: 2rem; }
         
-        .history-image:hover img {
-            filter: grayscale(0%);
-            transform: scale(1.02);
+        .sorocaba-badge {
+            background: #E1306C; /* Cor do Instagram */
+            color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold;
+            display: inline-block; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(225, 48, 108, 0.4);
         }
 
-        /* News Section CSS */
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .comment-bubble { 
+            background: white; color: #333; padding: 15px 20px; 
+            border-radius: 0 20px 20px 20px; margin-bottom: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); position: relative;
+            animation: fadeInUp 0.5s ease-out;
         }
+        .comment-bubble strong { color: #0066b3; display: block; font-size: 0.9rem; margin-bottom: 5px; }
+        .comment-bubble p { color: #555; margin: 0; font-size: 0.95rem; font-style: italic; }
 
-        .news-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+        /* Sections General */
+        section { padding: 80px 2rem; max-width: 100%; margin: 0 auto; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #0066b3; }
 
-        .news-card:hover {
-            transform: translateY(-5px);
-        }
+        /* Services Grid */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .service-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; border-top: 4px solid #0066b3; }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .service-card h3 { color: #0066b3; margin-bottom: 1rem; font-size: 1.5rem; }
 
-        .news-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background-color: #ddd;
-        }
+        /* Process Grid */
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 40px; max-width: 1200px; margin: 0 auto; }
+        .process-card { text-align: center; }
+        .process-num { background: #0066b3; color: white; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; font-weight: bold; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; }
+        .process-card h3 { font-size: 1.2rem; color: #333; margin-bottom: 10px; }
 
-        .news-content {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
+        /* About & History */
+        .about-content, .history-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .about-text ul { list-style: none; margin-top: 1.5rem; }
+        .about-text li:before { content: "✓"; color: #0066b3; font-weight: bold; margin-right: 10px; }
+        
+        .history-image img, .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .history-section { background-color: #f8f9fa; }
 
-        .news-date {
-            font-size: 0.8rem;
-            color: #cc0000;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .news-title {
-            font-size: 1.1rem;
-            color: #0066b3;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-            font-weight: 700;
-        }
-
-        .news-link {
-            margin-top: auto;
-            text-decoration: none;
-            color: #0066b3;
-            font-weight: 600;
-            border: 2px solid #0066b3;
-            padding: 8px 15px;
-            text-align: center;
-            border-radius: 5px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .news-link:hover {
-            background: #0066b3;
-            color: white;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            background: #f8f9fa;
-        }
-
-        .google-reviews-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
-        }
-
-        .manual-review-note {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-
-        .manual-review-note h3 {
-            color: #0066b3;
-            margin-bottom: 1rem;
-        }
-
-        .google-link-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #0066b3;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin-top: 1rem;
-        }
-
-        .google-link-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,102,179,0.3);
-        }
+        /* Reviews */
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1000px; margin: 0 auto 30px auto; }
+        .review-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+        .stars { color: #f4b400; }
 
         /* Contact */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .contact-info {
-            background: linear-gradient(135deg, #0066b3 0%, #004d87 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .contact-info h3 {
-            color: white;
-            margin-bottom: 2rem;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .info-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: white;
-        }
-
-        .info-item a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .info-item a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            margin-bottom: 0.5rem;
-            color: #0066b3;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #0066b3;
-        }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; }
+        .contact-info { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 2rem; border-radius: 15px; }
+        .contact-info h3 { color: white; margin-bottom: 1.5rem; }
+        .info-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .info-icon svg { width: 24px; height: 24px; fill: white; }
+        .info-item a { color: white; text-decoration: none; }
+        
+        .contact-form { display: flex; flex-direction: column; gap: 1rem; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .form-group label { margin-bottom: 0.5rem; color: #0066b3; font-weight: 600; }
+        .form-group input, .form-group textarea, .form-group select { padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; width: 100%; }
 
         /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
+        footer { background: #1a1a1a; color: white; text-align: center; padding: 2rem; }
+        .social-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
+        .social-links svg { width: 28px; height: 28px; fill: white; }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-            text-decoration: none;
-        }
-
-        .social-links svg {
-            width: 28px;
-            height: 28px;
-            fill: white;
-            transition: fill 0.3s;
-        }
-
-        .social-links a:hover svg {
-            fill: #0066b3;
-        }
-
-        /* Whatsapp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            animation: pulse-green 2s infinite;
-        }
-
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
-        }
-
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
+        /* WhatsApp Float */
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: #25d366; color: white; border-radius: 50%; text-align: center; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 99999; display: flex; align-items: center; justify-content: center; animation: pulse-green 2s infinite; }
+        .whatsapp-float svg { width: 35px; height: 35px; fill: white; }
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .about-content,
-            .contact-content,
-            .history-container,
-            .news-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .history-image {
-                order: -1;
-                margin-bottom: 2rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .viral-container, .about-content, .contact-content, .history-container, .services-grid, .reviews-grid, .process-grid { grid-template-columns: 1fr; }
+            .viral-video-wrapper { margin-bottom: 30px; }
+            .viral-content h2 { text-align: center; }
             .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
-            .whatsapp-float svg { width: 28px; height: 28px; }
         }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
@@ -604,9 +143,8 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#processo">Processo</a></li>
                 <li><a href="#historia">História</a></li>
-                <li><a href="#noticias">Notícias</a></li>
                 <li><a href="#avaliacoes">Avaliações</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -615,10 +153,69 @@
 
     <section class="hero" id="inicio">
         <h1>Auto Mecânica RG4</h1>
-        <p>Excelência em Serviços Automotivos com Confiança e Qualidade</p>
+        <p>Sua Oficina de Confiança em Votorantim e Sorocaba. Desde 2009 cuidando do seu carro.</p>
         <div class="cta-buttons">
             <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
-            <a href="https://wa.me/5515991113095" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://wa.me/5515991113095" class="btn btn-secondary" target="_blank">WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="stats-container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">+16</span>
+                <span class="stat-text">Anos de RG4</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">+36</span>
+                <span class="stat-text">Anos de Experiência</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5.0</span>
+                <span class="stat-text">Estrelas no Google</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="viral-section">
+        <div class="viral-container">
+            
+            <div class="viral-video-wrapper" style="text-align: center;">
+                <div style="display: inline-block; border: 4px solid white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative;">
+                    <video width="300" height="530" controls style="display: block; object-fit: cover; background: black;">
+                        <source src="./video-viral.mp4" type="video/mp4">
+                        Seu navegador não suporta vídeos.
+                    </video>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);">
+                        🔥 +220k Views
+                    </div>
+                </div>
+            </div>
+
+            <div class="viral-content">
+                <a href="https://www.instagram.com/sorocabanices" target="_blank" class="sorocaba-badge">
+                    📸 Destaque no @sorocabanices
+                </a>
+                <h2>Sucesso Absoluto na Região! 🚀</h2>
+                <p>O reconhecimento veio em peso! Nosso vídeo viralizou com mais de <strong>220.000 visualizações</strong> e centenas de comentários de apoio. Veja o que disseram:</p>
+
+                <div class="comments-list">
+                    <div class="comment-bubble">
+                        <strong>@murilogur</strong>
+                        <p>"O melhor, justo e honesto. Sr. Robson e toda equipe. 👏👏"</p>
+                    </div>
+                    <div class="comment-bubble">
+                        <strong>@gilmar.jr88</strong>
+                        <p>"São sensacionais essas pessoas, essa família. Oficina de qualidade top, recomendo!" 🔧🚗</p>
+                    </div>
+                    <div class="comment-bubble">
+                        <strong>@mainerosa</strong>
+                        <p>"Dona Isabel e seu Robson são uns queridos!! ❤️ Oficina com excelentes profissionais e muito capacitados."</p>
+                    </div>
+                </div>
+                
+                <a href="https://www.instagram.com/autorg4" target="_blank" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Ver mais no Instagram 📸</a>
+            </div>
         </div>
     </section>
 
@@ -628,32 +225,58 @@
             <div class="service-card">
                 <div class="service-icon">🔧</div>
                 <h3>Manutenção Preventiva</h3>
-                <p>Revisões completas para manter seu veículo sempre em perfeito estado e evitar problemas futuros.</p>
+                <p>Revisões completas para manter seu veículo seguro e evitar gastos maiores no futuro.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">⚙️</div>
                 <h3>Mecânica Geral</h3>
-                <p>Diagnóstico e reparo de sistemas mecânicos com equipamentos modernos e técnicos especializados.</p>
+                <p>Especialistas em motor, câmbio e sistemas mecânicos complexos.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🛞</div>
                 <h3>Troca de Óleo e Filtros</h3>
-                <p>Serviços rápidos de troca de óleo, filtros e fluidos com produtos de alta qualidade.</p>
+                <p>Troca rápida com produtos originais para garantir a vida útil do seu motor.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🔍</div>
                 <h3>Diagnóstico Eletrônico</h3>
-                <p>Análise computadorizada para identificar problemas eletrônicos com precisão.</p>
+                <p>Scanner de última geração para identificar falhas com precisão milimétrica.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🚗</div>
                 <h3>Suspensão e Freios</h3>
-                <p>Reparos e manutenção de sistemas de suspensão e freios para sua segurança.</p>
+                <p>Segurança em primeiro lugar. Revisão completa de amortecedores e pastilhas.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">❄️</div>
                 <h3>Ar Condicionado</h3>
-                <p>Manutenção e recarga de ar condicionado automotivo com garantia de qualidade.</p>
+                <p>Limpeza, higienização e recarga de gás para seu conforto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section" id="processo">
+        <h2>Como é o Nosso Atendimento?</h2>
+        <div class="process-grid">
+            <div class="process-card">
+                <div class="process-num">1</div>
+                <h3>Agendamento</h3>
+                <p>Você agenda pelo WhatsApp e traz o carro. Atendemos Votorantim e Sorocaba sem filas.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-num">2</div>
+                <h3>Diagnóstico Transparente</h3>
+                <p>Avaliamos o carro e enviamos o orçamento detalhado antes de mexer em qualquer coisa.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-num">3</div>
+                <h3>Execução Técnica</h3>
+                <p>Aprovou? Nossa equipe certificada realiza o serviço com peças de qualidade.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-num">4</div>
+                <h3>Entrega Garantida</h3>
+                <p>Você recebe o carro revisado, limpo e com garantia total do serviço.</p>
             </div>
         </div>
     </section>
@@ -662,19 +285,17 @@
         <h2>Sobre a RG4</h2>
         <div class="about-content">
             <div class="about-text">
-                <h3>Compromisso com a Excelência</h3>
-                <p>A Auto Mecânica RG4 é referência em serviços automotivos, oferecendo soluções completas com qualidade, agilidade e preços justos. Nossa equipe de profissionais qualificados está sempre pronta para atender você com dedicação e transparência.</p>
+                <h3>Honestidade em Primeiro Lugar</h3>
+                <p>A Auto Mecânica RG4 nasceu do sonho do Sr. Robson em oferecer um serviço justo e tecnicamente impecável em Votorantim e Sorocaba. Diferente de oficinas que "empurram serviços", aqui você só paga pelo que seu carro realmente precisa.</p>
                 <ul>
-                    <li>Equipe técnica especializada e certificada</li>
-                    <li>Equipamentos modernos e tecnologia de ponta</li>
-                    <li>Peças originais e de qualidade garantida</li>
-                    <li>Atendimento personalizado e transparente</li>
-                    <li>Garantia em todos os serviços realizados</li>
-                    <li>Localização privilegiada e fácil acesso</li>
+                    <li>Fundada em 14 de Fevereiro de 2009</li>
+                    <li>Liderada por Especialista Chevrolet (+36 anos de casa)</li>
+                    <li>Oficina Familiar com atendimento humanizado</li>
+                    <li>Transparência total: mostramos as peças trocadas</li>
                 </ul>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600" alt="Oficina RG4" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600" alt="Oficina RG4">
             </div>
         </div>
     </section>
@@ -684,24 +305,20 @@
             <div class="history-image">
                 <img src="./fundador.jpeg" onerror="this.src='https://images.unsplash.com/photo-1504222490245-487630b9f391?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'" alt="Sr. Robson Gonçales">
                 <div style="background: #0066b3; color: white; padding: 10px 20px; position: absolute; bottom: 30px; left: -10px; border-radius: 0 50px 50px 0; font-weight: bold; box-shadow: 5px 5px 15px rgba(0,0,0,0.3);">
-                    Desde 2009
+                    Fundada em 2009
                 </div>
             </div>
             
             <div class="history-text">
                 <h3>Nossa Origem</h3>
-                <h2 style="color: #333; margin-bottom: 1.5rem; text-align: left;">De um sonho na garagem à referência em Votorantim</h2>
+                <h2 style="color: #333; margin-bottom: 1.5rem; text-align: left;">De um sonho na garagem à referência em Votorantim e Sorocaba</h2>
                 
-                <p>A história da RG4 começa com a paixão do Sr. <strong>Robson Gonçales</strong>, que dedicou <strong>36 anos de sua vida</strong> trabalhando nas concessionárias Chevrolet (Automec Sorocaba e Roqueville São Roque).</p>
-                <br>
-                <p>Após se aposentar, ao ver um anúncio de venda de equipamentos de oficina no jornal, Robson tomou uma decisão corajosa: <strong>vendeu seu próprio carro</strong> para comprar o maquinário e montar a oficina na parte de baixo de sua casa.</p>
-
+                <p>O Sr. <strong>Robson Gonçales</strong> dedicou 36 anos de sua vida às concessionárias Chevrolet. Ao se aposentar, vendeu seu próprio carro para comprar ferramentas e abrir a RG4.</p>
+                
                 <div class="history-highlight">
                     "Honestidade é obrigação. Confiança é saber exatamente o que está fazendo."
-                    <br><span style="font-size: 0.9rem; font-weight: bold; margin-top: 5px; display: block; color: #0066b3;">— O lema de Robson Gonçales</span>
+                    <br><span style="font-size: 0.9rem; font-weight: bold; margin-top: 5px; display: block; color: #0066b3;">— Robson Gonçales</span>
                 </div>
-
-                <p>No dia <strong>14 de fevereiro de 2009</strong>, nascia a Auto Mecânica RG4, fundada pelo Sr. Robson e sua esposa, Dona Isabel. Um negócio familiar que cresceu baseado na transparência e competência técnica.</p>
 
                 <div class="history-stats">
                     <div class="stat-item">
@@ -722,10 +339,6 @@
             <h2 style="text-align: center; color: #0066b3; margin-bottom: 2rem;">
                 Últimas do Mundo Automotivo 🚗
             </h2>
-            <p style="text-align: center; color: #666; margin-top: -1.5rem; margin-bottom: 3rem;">
-                Fique por dentro das novidades enquanto cuidamos do seu carro.
-            </p>
-
             <div id="news-container" class="news-grid">
                 <p style="text-align: center; width: 100%; color: #888;">Carregando notícias...</p>
             </div>
@@ -733,18 +346,40 @@
     </section>
 
     <section class="testimonials" id="avaliacoes">
-        <h2>Avaliações dos Nossos Clientes</h2>
+        <h2>O que dizem nossos clientes</h2>
         
-        <div class="manual-review-note">
-            <h3>⭐ Veja nossas avaliações no Google</h3>
-            <p>Confira o que nossos clientes dizem sobre nossos serviços!</p>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">C</div>
+                    <div><strong>Carlos Silva</strong><div class="stars">⭐⭐⭐⭐⭐</div></div>
+                </div>
+                <p class="review-text">"Melhor oficina de Votorantim. O Sr. Robson é muito honesto, só troca o que precisa. Recomendo de olhos fechados."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">M</div>
+                    <div><strong>Mariana Souza</strong><div class="stars">⭐⭐⭐⭐⭐</div></div>
+                </div>
+                <p class="review-text">"Sou de Sorocaba e venho até aqui pelo atendimento. Explicaram tudo o que estava acontecendo com meu carro e o preço foi muito justo."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">R</div>
+                    <div><strong>Rafael P.</strong><div class="stars">⭐⭐⭐⭐⭐</div></div>
+                </div>
+                <p class="review-text">"Serviço rápido e de qualidade. A equipe é muito técnica e atenciosa. Virei cliente fiel."</p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
             <a href="https://search.google.com/local/reviews?placeid=ChIJtVELhguKxZQRSk8rJ2vRaxs" target="_blank" rel="noopener noreferrer" class="google-link-btn">
                 <span>📍</span>
-                <span>Ver Avaliações no Google</span>
+                <span>Ver todas as avaliações no Google</span>
             </a>
         </div>
 
-        <div class="google-reviews-container">
+        <div class="google-reviews-container" style="margin-top: 30px;">
              <iframe 
                 src="https://maps.google.com/maps?q=Rua%20Professor%20Jos%C3%A9%20do%20Carmo%20Madureira%2C%2092%20-%20Votorantim&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
@@ -758,46 +393,26 @@
     </section>
 
     <section id="contato">
-        <h2>Entre em Contato</h2>
+        <h2>Fale Conosco</h2>
         <div class="contact-content">
             <div class="contact-info">
-                <h3>Informações de Contato</h3>
-                
+                <h3>Auto Mecânica RG4</h3>
                 <div class="info-item">
-                    <span class="info-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    </span>
+                    <span class="info-icon">📍</span>
                     <span>Rua Professor José do Carmo Madureira, 92<br>Centro - Votorantim, SP</span>
                 </div>
-                
                 <div class="info-item">
                     <span class="info-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                     </span>
                     <a href="https://wa.me/5515991113095" target="_blank" style="color: white; font-weight: bold;">(15) 99111-3095</a>
                 </div>
-
                 <div class="info-item">
-                    <span class="info-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
-                    </span>
-                    <a href="https://instagram.com/autorg4" target="_blank">@autorg4</a>
-                </div>
-
-                <div class="info-item">
-                    <span class="info-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    </span>
+                    <span class="info-icon">📧</span>
                     <span>automecanicarg4@hotmail.com</span>
                 </div>
-                <div class="info-item">
-                    <span class="info-icon">⏰</span>
-                    <div>
-                        <div>Segunda a Sexta: 8h às 18h</div>
-                    </div>
-                </div>
-
-                <div style="margin-top: 25px; border-radius: 10px; overflow: hidden; height: 200px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                
+                <div class="map-container" style="margin-top: 25px; border-radius: 10px; overflow: hidden; height: 200px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
                     <iframe 
                         src="https://maps.google.com/maps?q=Rua%20Professor%20Jos%C3%A9%20do%20Carmo%20Madureira%2C%2092%20-%20Votorantim&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                         width="100%" 
@@ -821,30 +436,22 @@
                     <input type="tel" placeholder="(00) 00000-0000" required>
                 </div>
                 <div class="form-group">
-                    <label>E-mail</label>
-                    <input type="email" placeholder="seu@email.com" required>
-                </div>
-                <div class="form-group">
                     <label>Serviço Desejado</label>
                     <select required>
                         <option value="">Selecione um serviço</option>
                         <option>Manutenção Preventiva</option>
                         <option>Mecânica Geral</option>
-                        <option>Troca de Óleo e Filtros</option>
+                        <option>Troca de Óleo</option>
                         <option>Diagnóstico Eletrônico</option>
                         <option>Suspensão e Freios</option>
-                        <option>Ar Condicionado</option>
                         <option>Outro</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Mensagem</label>
-                    <textarea rows="4" placeholder="Descreva o problema ou serviço desejado"></textarea>
+                    <textarea rows="4" placeholder="Descreva o problema"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitação</button>
-                <p style="font-size: 0.8rem; color: #666; margin-top: 10px; text-align: center;">
-                    🔒 Seus dados estão seguros e não enviaremos spam.
-                </p>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar via WhatsApp</button>
             </form>
         </div>
     </section>
@@ -852,153 +459,71 @@
     <section style="background-color: #003366; color: white; padding: 2rem 0; text-align: center;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
             <h3 style="color: white; margin-bottom: 1.5rem; font-size: 1.4rem;">Facilidade no Pagamento</h3>
-            
             <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;">
-                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px;">
-                    <span style="font-size: 1.5rem;">💠</span>
-                    <span>Aceitamos <strong>PIX</strong></span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px;">
-                    <span style="font-size: 1.5rem;">💳</span>
-                    <span>Cartão de Crédito e Débito</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 50px;">
-                    <span style="font-size: 1.5rem;">📅</span>
-                    <span>Parcelamos em até <strong>12x</strong> ou em 3x sem <strong> JUROS </strong></span>
-                </div>
+                <span>💠 Aceitamos <strong>PIX</strong></span>
+                <span>💳 Cartão de Crédito e Débito</span>
+                <span>📅 Parcelamos em até <strong>12x</strong></span>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="social-links">
-            <a href="https://instagram.com/autorg4" target="_blank" rel="noopener noreferrer" title="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
-            </a>
-            <a href="https://wa.me/5515991113095" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            </a>
-            <a href="https://search.google.com/local/reviews?placeid=ChIJtVELhguKxZQRSk8rJ2vRaxs" target="_blank" rel="noopener noreferrer" title="Google">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            </a>
+            <a href="https://instagram.com/autorg4" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg></a>
+            <a href="https://wa.me/5515991113095" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
         </div>
         <p>© 2026 Auto Mecânica RG4. Todos os direitos reservados.</p>
-        <p>Desenvolvido com excelência para servir você melhor</p>
     </footer>
 
-    <a href="https://wa.me/5515991113095?text=Ol%C3%A1%20Auto%20RG4!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." 
-       class="whatsapp-float" 
-       target="_blank"
-       title="Falar no WhatsApp">
+    <a href="https://wa.me/5515991113095?text=Ol%C3%A1%20Auto%20RG4!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank" title="Falar no WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Smooth scrolling para links internos
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
+        });
 
-            // Formulário de contato COM MENSAGEM PERSONALIZADA (NÚMERO ATUALIZADO)
-            const form = document.querySelector('.contact-form');
-            if(form){
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    
-                    const nome = this.querySelector('input[type="text"]').value;
-                    const telefone = this.querySelector('input[type="tel"]').value;
-                    const email = this.querySelector('input[type="email"]').value;
-                    const servico = this.querySelector('select').value;
-                    const mensagem = this.querySelector('textarea').value;
-                    
-                    let text = "*Olá! Vim pedir um orçamento através do website da Auto RG4* 🚗🔧\n\n";
-                    text += "----------------------------------\n";
-                    text += "*Nome:* " + nome + "\n";
-                    text += "*Telefone:* " + telefone + "\n";
-                    text += "*E-mail:* " + email + "\n";
-                    text += "*Serviço:* " + servico + "\n";
-                    text += "*Mensagem:* " + mensagem + "\n";
-                    text += "----------------------------------";
+        // Formulário com envio para WhatsApp
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = this.querySelector('input[type="text"]').value;
+            const telefone = this.querySelector('input[type="tel"]').value;
+            const servico = this.querySelector('select').value;
+            const mensagem = this.querySelector('textarea').value;
+            
+            let text = "*Olá! Vim pedir um orçamento através do website da Auto RG4* 🚗🔧\n\n";
+            text += "----------------------------------\n";
+            text += "*Nome:* " + nome + "\n";
+            text += "*Telefone:* " + telefone + "\n";
+            text += "*Serviço:* " + servico + "\n";
+            text += "*Mensagem:* " + mensagem + "\n";
+            text += "----------------------------------";
 
-                    const encodedText = encodeURIComponent(text);
-                    const whatsappLink = `https://wa.me/5515991113095?text=${encodedText}`;
-                    
-                    window.open(whatsappLink, '_blank');
-                    this.reset();
-                });
-            }
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/5515991113095?text=${encodedText}`, '_blank');
+            this.reset();
+        });
 
-            // Animação ao scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.service-card, .news-card').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
+        // Animação ao scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
             });
+        }, { threshold: 0.1 });
 
-            // SCRIPT DE NOTÍCIAS AUTOMÁTICAS
-            const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://motor1.uol.com.br/rss/news/all/';
-
-            fetch(rssUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const container = document.getElementById('news-container');
-                    
-                    if(data.status === 'ok' && data.items.length > 0) {
-                        container.innerHTML = '';
-                        const latestNews = data.items.slice(0, 3);
-
-                        latestNews.forEach(item => {
-                            const image = item.enclosure.link ? item.enclosure.link : 'https://i.imgur.com/sc5KPkR.png';
-                            const date = new Date(item.pubDate).toLocaleDateString('pt-BR');
-
-                            const cardHTML = `
-                                <article class="news-card">
-                                    <img src="${image}" alt="${item.title}" class="news-image" onerror="this.src='https://via.placeholder.com/400x200?text=Auto+RG4'">
-                                    <div class="news-content">
-                                        <span class="news-date">${date}</span>
-                                        <h3 class="news-title">${item.title}</h3>
-                                        <a href="${item.link}" target="_blank" class="news-link">Ler Matéria Completa</a>
-                                    </div>
-                                </article>
-                            `;
-                            container.innerHTML += cardHTML;
-                        });
-                    } else {
-                        container.innerHTML = '<p>Não foi possível carregar as notícias no momento.</p>';
-                    }
-                })
-                .catch(error => {
-                    console.error('Erro ao buscar notícias:', error);
-                    document.getElementById('news-container').innerHTML = '<p style="text-align:center;">Notícias indisponíveis no momento.</p>';
-                });
+        document.querySelectorAll('.service-card, .comment-bubble, .process-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
         });
     </script>
 </body>
 </html>
-
-
