@@ -43,7 +43,7 @@
         .btn-secondary { background: transparent; color: white; border: 2px solid white; }
         .btn-secondary:hover { background: white; color: #0066b3; }
 
-        /* --- SESSÃO DE AUTORIDADE --- */
+        /* --- SESSÃO DE AUTORIDADE (BRANCO E GRANDE) --- */
         .stats-container { 
             background-color: #004d87; 
             padding: 40px 20px; 
@@ -55,7 +55,6 @@
         .stats-grid { display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; gap: 20px; }
         .stat-item { text-align: center; }
         
-        /* Números Grandes e Brancos */
         .stat-number { 
             display: block; 
             font-size: 2.5rem; 
@@ -64,7 +63,6 @@
             margin-bottom: 5px;
         }
         
-        /* Texto Descritivo Branco e Negrito */
         .stat-text { 
             font-size: 1rem; 
             color: #ffffff; 
@@ -408,7 +406,7 @@
                 <h3>Nossa Origem</h3>
                 <h2 style="color: #333; margin-bottom: 1.5rem; text-align: left;">De um sonho na garagem à referência em Votorantim e Sorocaba</h2>
                 
-                <p>O Sr. <strong>Robson Gonçales</strong> dedicou 36 anos de sua vida às concessionárias Chevrolet. Ao se aposentar, vendeu seu próprio carro para comprar ferramentas e abrir a RG4.</p>
+                <p>O Sr. <strong>Robson Gonçales</strong> dedicou 36 anos de sua vida às concessionárias Chevrolet. Ao se aposentar, vendeu seu próprio carro para comprar ferramentas e abrir a RG4 junto com a sua esposa, a Dona Isabel, casados há mais de 46 anos..</p>
                 
                 <div class="history-highlight">
                     "Honestidade é obrigação. Confiança é saber exatamente o que está fazendo."
@@ -574,7 +572,7 @@
             <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;">
                 <span>💠 Aceitamos <strong>PIX</strong></span>
                 <span>💳 Cartão de Crédito e Débito</span>
-                <span>📅 Parcelamos em até <strong>12x</strong> ou em até 3x sem <strongo> JUROS </strongo></span>
+                <span>📅 Parcelamos em até <strong>12x</strong> ou em até 3x sem <strong>JUROS</strong></span>
             </div>
         </div>
     </section>
@@ -609,6 +607,7 @@
             if(form){
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
+                    
                     const nome = this.querySelector('input[type="text"]').value;
                     const telefone = this.querySelector('input[type="tel"]').value;
                     const servico = this.querySelector('select').value;
@@ -623,7 +622,9 @@
                     text += "----------------------------------";
 
                     const encodedText = encodeURIComponent(text);
-                    window.open(`https://wa.me/5515991113095?text=${encodedText}`, '_blank');
+                    const whatsappLink = `https://wa.me/5515991113095?text=${encodedText}`;
+                    
+                    window.open(whatsappLink, '_blank');
                     this.reset();
                 });
             }
@@ -638,7 +639,7 @@
                 });
             }, { threshold: 0.1 });
 
-            document.querySelectorAll('.service-card, .comment-bubble, .process-card, .review-card, .news-card').forEach(el => {
+            document.querySelectorAll('.service-card, .news-card, .process-card, .review-card, .comment-bubble').forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(20px)';
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
