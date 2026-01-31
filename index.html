@@ -207,6 +207,21 @@
         }
 
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* === CORREÇÃO DO BOTÃO DO FORMULÁRIO (DESTAQUE AZUL) === */
+    .contact-form .btn-primary {
+        background: #0066b3 !important; /* Azul da marca */
+        color: white !important;        /* Texto branco */
+        border: none;
+        font-weight: 700;
+        box-shadow: 0 5px 15px rgba(0, 102, 179, 0.4); /* Sombra azulada */
+    }
+
+    .contact-form .btn-primary:hover {
+        background: #004d87 !important; /* Azul mais escuro no mouse */
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 102, 179, 0.6);
+    }
     </style>
 </head>
 <body>
@@ -663,4 +678,5 @@
     </script>
 </body>
 </html>
+
 
