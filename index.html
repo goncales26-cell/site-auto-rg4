@@ -6,12 +6,10 @@
     <title>Auto Mecânica RG4 | Oficina em Votorantim e Sorocaba</title>
     <link rel="icon" type="image/png" href="https://i.imgur.com/sc5KPkR.png">
 
-    <meta name="description" content="Auto Mecânica RG4. Oficina referência em Votorantim e Sorocaba. Destaque no Sorocabanices!">
-    <meta name="keywords" content="mecânica votorantim, oficina sorocaba, revisão automotiva, sorocabanices, rg4">
+    <meta name="description" content="Auto Mecânica RG4. Oficina referência em Votorantim e Sorocaba. Mecânica geral, freios, suspensão e diagnóstico. Orçamento via WhatsApp.">
+    <meta name="keywords" content="mecânica votorantim, oficina sorocaba, revisão automotiva, sorocabanices, rg4, troca de óleo votorantim">
     <meta name="author" content="GTI Tecnologia">
-    <meta name="description" content="Auto Mecânica RG4 em Votorantim. Revisão, troca de óleo, freios e diagnóstico automotivo. Atendimento rápido e honesto. Orçamento via WhatsApp.">
 
-    
     <style>
         /* --- GERAL --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,7 +28,8 @@
         
         /* --- HERO --- */
         .hero { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 160px 2rem 100px; text-align: center; margin-top: 0; }
-        .hero h1 { font-size: 3rem; margin-bottom: 1rem; animation: fadeInUp 1s; }
+        /* H1 ajustado para SEO */
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; animation: fadeInUp 1s; line-height: 1.2; }
         .hero p { font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto; }
         .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         .btn { padding: 15px 35px; border: none; border-radius: 50px; font-size: 1.1rem; cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block; font-weight: 600; }
@@ -39,7 +38,7 @@
         .btn-secondary { background: transparent; color: white; border: 2px solid white; }
         .btn-secondary:hover { background: white; color: #0066b3; }
 
-        /* --- ESTATÍSTICAS (BRANCO E GRANDE) --- */
+        /* --- ESTATÍSTICAS --- */
         .stats-container { background-color: #004d87; padding: 50px 20px; color: white; margin-top: -5px; position: relative; z-index: 10; }
         .stats-grid { display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; gap: 30px; }
         .stat-item { text-align: center; }
@@ -53,18 +52,52 @@
         .viral-content p { color: #e0e0e0; font-size: 1.1rem; margin-bottom: 2rem; }
         .sorocaba-badge { background: #E1306C; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; display: inline-block; margin-bottom: 15px; text-decoration: none; }
         
-        /* CORREÇÃO DOS COMENTÁRIOS: TEXTO ESCURO */
         .comment-bubble { background: white; color: #333; padding: 15px 20px; border-radius: 0 20px 20px 20px; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
         .comment-bubble strong { color: #0066b3; display: block; font-size: 0.9rem; margin-bottom: 5px; }
         .comment-bubble p { color: #333; margin: 0; font-style: italic; }
 
         /* --- SERVIÇOS & PROCESSOS --- */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .service-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; border-top: 4px solid #0066b3; }
+        .service-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; border-top: 4px solid #0066b3; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
         .service-card:hover { transform: translateY(-10px); }
         .service-icon { font-size: 3rem; margin-bottom: 1rem; }
-        .service-card h3 { color: #0066b3; margin-bottom: 1rem; font-size: 1.5rem; }
+        .service-card h3 { color: #0066b3; margin-bottom: 0.5rem; font-size: 1.5rem; }
+        .service-card p { margin-bottom: 1.5rem; }
 
+        /* Novo Botão CTA nos Serviços */
+        .btn-service-cta {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            color: #25d366; /* WhatsApp Green */
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid #25d366;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .btn-service-cta:hover {
+            background-color: #25d366;
+            color: white;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        /* --- NOVO: SEO LOCAL SECTION --- */
+        .local-seo-section {
+            background-color: #eef2f5;
+            text-align: center;
+            padding: 60px 2rem;
+            border-top: 1px solid #dce1e6;
+            border-bottom: 1px solid #dce1e6;
+        }
+        .local-seo-section h2 { margin-bottom: 1rem; font-size: 2rem; }
+        .local-seo-section p { max-width: 800px; margin: 0 auto; font-size: 1.15rem; color: #555; }
+        .local-seo-section strong { color: #0066b3; }
+
+        /* --- PROCESSO --- */
         .process-section { background-color: #fff; }
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 40px; }
         .process-card { text-align: center; }
@@ -77,7 +110,7 @@
         .about-text li:before { content: "✓"; color: #0066b3; font-weight: bold; margin-right: 10px; }
         .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
-        /* --- HISTÓRIA (Correção Layout) --- */
+        /* --- HISTÓRIA --- */
         .history-section { background-color: #f8f9fa; width: 100%; max-width: 100%; padding: 80px 0; }
         .history-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .history-text h3 { color: #0066b3; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
@@ -102,7 +135,7 @@
         .stars { color: #f4b400; }
         .google-link-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: #0066b3; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 20px; }
 
-        /* --- CONTATO (CORRIGIDO E SEGURO) --- */
+        /* --- CONTATO --- */
         .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
         .contact-info { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 2rem; border-radius: 15px; }
         .info-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
@@ -115,7 +148,6 @@
         .form-group label { margin-bottom: 0.5rem; color: #0066b3; font-weight: 600; }
         .form-group input, .form-group textarea, .form-group select { padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; width: 100%; }
         
-        /* Botão do Formulário (Azul) */
         .contact-form .btn-primary { background: #0066b3; color: white; border: none; font-weight: 700; width: 100%; box-shadow: 0 5px 15px rgba(0, 102, 179, 0.4); }
         .contact-form .btn-primary:hover { background: #004d87; transform: translateY(-2px); }
 
@@ -144,7 +176,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="https://i.imgur.com/sc5KPkR.png" alt="RG4 Logo">
+                <img src="https://i.imgur.com/sc5KPkR.png" alt="Auto Mecânica RG4 - Oficina em Votorantim">
                 <span style="font-weight: bold; font-size: 1.2rem;">Auto Mecânica RG4</span>
             </div>
             <ul class="nav-links">
@@ -160,7 +192,7 @@
     </header>
 
     <section class="hero" id="inicio">
-        <h1>Auto Mecânica RG4</h1>
+        <h1>Auto Mecânica em Votorantim – RG4</h1>
         <p>Sua Oficina de Confiança em Votorantim e Sorocaba. Desde 2009 cuidando do seu carro.</p>
         <div class="cta-buttons">
             <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
@@ -202,14 +234,56 @@
     </section>
 
     <section id="servicos">
-        <h2>Nossos Serviços</h2>
+        <h2>Nossos Serviços Automotivos</h2>
         <div class="services-grid">
-            <div class="service-card"><div class="service-icon">🔧</div><h3>Manutenção Preventiva</h3><p>Revisões completas para manter seu veículo seguro.</p></div>
-            <div class="service-card"><div class="service-icon">⚙️</div><h3>Mecânica Geral</h3><p>Especialistas em motor, câmbio e sistemas complexos.</p></div>
-            <div class="service-card"><div class="service-icon">🛞</div><h3>Troca de Óleo</h3><p>Troca rápida com produtos originais.</p></div>
-            <div class="service-card"><div class="service-icon">🔍</div><h3>Diagnóstico</h3><p>Scanner de última geração para identificar falhas.</p></div>
-            <div class="service-card"><div class="service-icon">🚗</div><h3>Suspensão e Freios</h3><p>Segurança em primeiro lugar.</p></div>
-            <div class="service-card"><div class="service-icon">❄️</div><h3>Ar Condicionado</h3><p>Limpeza, higienização e recarga de gás.</p></div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Manutenção Preventiva</h3>
+                <p>Revisões completas para manter seu veículo seguro.</p>
+                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Manuten%C3%A7%C3%A3o%20Preventiva" class="btn-service-cta" target="_blank">🔧 Orçamento no WhatsApp</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Mecânica Geral</h3>
+                <p>Especialistas em motor, câmbio e sistemas complexos.</p>
+                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Mec%C3%A2nica%20Geral" class="btn-service-cta" target="_blank">🔧 Orçamento no WhatsApp</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛞</div>
+                <h3>Troca de Óleo</h3>
+                <p>Troca rápida com produtos originais e filtros.</p>
+                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Troca%20de%20%C3%93leo" class="btn-service-cta" target="_blank">🔧 Orçamento no WhatsApp</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Diagnóstico Eletrônico</h3>
+                <p>Scanner de última geração para identificar falhas.</p>
+                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Diagn%C3%B3stico" class="btn-service-cta" target="_blank">🔧 Orçamento no WhatsApp</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h3>Suspensão e Freios</h3>
+                <p>Segurança em primeiro lugar para você e sua família.</p>
+                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Freios%20e%20Suspens%C3%A3o" class="btn-service-cta" target="_blank">🔧 Orçamento no WhatsApp</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <h3>Ar Condicionado</h3>
+                <p>Limpeza, higienização e recarga de gás.</p>
+                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Ar%20Condicionado" class="btn-service-cta" target="_blank">🔧 Orçamento no WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="local-seo-section">
+        <div class="container">
+            <h2>Atendimento em Votorantim e Sorocaba</h2>
+            <p>
+                A <strong>Auto Mecânica RG4</strong> atende Votorantim, Sorocaba e toda a região, 
+                oferecendo serviços de mecânica geral, revisão preventiva e diagnóstico automotivo 
+                com transparência, preço justo e rapidez. Se você procura uma oficina de confiança perto de você, 
+                venha conhecer a RG4.
+            </p>
         </div>
     </section>
 
@@ -236,13 +310,13 @@
                     <li>Transparência total: mostramos as peças trocadas</li>
                 </ul>
             </div>
-            <div class="about-image"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600" alt="Oficina RG4"></div>
+            <div class="about-image"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600" alt="Equipe da Auto Mecânica RG4 atendendo em Votorantim e Sorocaba"></div>
         </div>
     </section>
 
     <section class="history-section" id="historia">
         <div class="history-container">
-            <div class="history-image"><img src="./fundador.jpeg" onerror="this.src='https://images.unsplash.com/photo-1504222490245-487630b9f391?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'" alt="Sr. Robson Gonçales"></div>
+            <div class="history-image"><img src="./fundador.jpeg" onerror="this.src='https://images.unsplash.com/photo-1504222490245-487630b9f391?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'" alt="Sr. Robson Gonçales, fundador da Auto Mecânica RG4 Votorantim"></div>
             <div class="history-text">
                 <h3>Nossa Origem</h3>
                 <h2>De um sonho na garagem à referência</h2>
@@ -461,7 +535,3 @@
     </script>
 </body>
 </html>
-
-
-
-
