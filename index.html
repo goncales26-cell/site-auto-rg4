@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     
-    <title>Auto Mecânica RG4 | Oficina Multimarcas em Votorantim</title>
-    <meta name="description" content="Auto Mecânica RG4. Oficina Multimarcas em Votorantim e Sorocaba. Atendemos nacionais e importados. Mecânica geral, freios, suspensão e diagnóstico.">
-    <meta name="keywords" content="mecânica votorantim, oficina multimarcas, oficina sorocaba, revisão automotiva, rg4, troca de óleo, mecânica importados">
+    <title>Auto Mecânica RG4 | Oficina Multimarcas em Votorantim e Sorocaba</title>
+    <meta name="description" content="Auto Mecânica RG4. Oficina referência em Votorantim e Sorocaba. Especialista em mecânica geral, injeção eletrônica, freios e suspensão de nacionais e importados.">
+    <meta name="keywords" content="mecânica votorantim, oficina sorocaba, revisão automotiva, oficina chevrolet votorantim, rg4, troca de óleo, mecânico de confiança">
     <meta name="robots" content="index, follow">
     <meta name="author" content="GTI Tecnologia">
     
@@ -28,7 +28,8 @@
       "@type": "AutoRepair",
       "name": "Auto Mecânica RG4",
       "image": "https://i.imgur.com/sc5KPkR.png",
-      "description": "Oficina mecânica referência em Votorantim e Sorocaba. Atendemos todas as marcas.",
+      "telephone": "+5515991113095",
+      "email": "automecanicarg4@hotmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Professor José do Carmo Madureira, 92",
@@ -37,8 +38,24 @@
         "postalCode": "18110-000",
         "addressCountry": "BR"
       },
-      "telephone": "+5515991113095",
+      "url": "https://automecanicarg4.com.br",
       "priceRange": "$$"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Vocês atendem carros importados?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim, atendemos todas as marcas nacionais e importadas com equipamentos de diagnóstico de última geração." }
+      },{
+        "@type": "Question",
+        "name": "Quanto tempo demora uma revisão?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A maioria das revisões preventivas é entregue no mesmo dia. Serviços mais complexos dependem de avaliação." }
+      }]
     }
     </script>
 
@@ -107,7 +124,7 @@
         .btn-service-cta { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; color: #25d366; font-weight: 700; text-decoration: none; border: 2px solid #25d366; padding: 8px 16px; border-radius: 25px; font-size: 0.9rem; transition: 0.3s; }
         .btn-service-cta:hover { background-color: #25d366; color: white; }
 
-        /* Marcas (NOVA SEÇÃO) */
+        /* Marcas */
         .brands-section { padding: 60px 0; background: #f8f9fa; border-top: 1px solid #eee; }
         .brands-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px; }
         .brand-item img { height: 50px; filter: grayscale(100%); opacity: 0.6; transition: 0.3s; }
@@ -157,8 +174,20 @@
         .form-card { background: #f9fafb; padding: 40px; border-radius: 15px; border: 1px solid #eee; }
         .form-input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 15px; }
 
-        /* Footer */
-        footer { background: #1a1a1a; color: #ccc; padding: 60px 0 20px; text-align: center; }
+        /* FAQ */
+        .faq-section { background: #F9FAFB; padding: 60px 0; }
+        .faq-box h3 { font-size: 1.1rem; color: var(--text-main); margin-bottom: 8px; margin-top: 20px; }
+        .faq-box p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; border-bottom: 1px solid #E5E7EB; padding-bottom: 15px; }
+
+        /* SEO & Footer */
+        .seo-text-section { background: white; padding: 60px 0; border-top: 1px solid #E5E7EB; }
+        .seo-footer { background: #111827; padding: 60px 0 20px; color: #9CA3AF; border-bottom: 1px solid #374151; }
+        .seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        .seo-col h5 { color: white; font-size: 1rem; margin-bottom: 15px; font-weight: 600; }
+        .seo-list { font-size: 0.85rem; list-style: none; padding: 0; }
+        .seo-list li { margin-bottom: 6px; }
+
+        footer { background: #111827; color: #ccc; padding: 60px 0 20px; text-align: center; }
         .social-icons { display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; }
         .social-icons a { color: white; font-size: 1.5rem; transition: 0.3s; }
         .social-icons a:hover { color: var(--primary); }
@@ -181,7 +210,7 @@
     <header>
         <div class="container nav-flex">
             <a href="#" class="logo">
-                <img src="https://i.imgur.com/sc5KPkR.png" alt="Auto Mecânica RG4">
+                <img src="https://i.imgur.com/sc5KPkR.png" alt="Auto Mecânica RG4" style="border-radius: 8px;">
                 Auto Mecânica RG4
             </a>
             <ul class="nav-menu">
@@ -289,14 +318,14 @@
         </div>
     </section>
 
-    <section class="brands-section">
+    <section class="brands-section" style="padding: 60px 0; background: #f8f9fa; border-top: 1px solid #eee;">
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-label">Especialistas em Multimarcas</span>
                 <h2>Trabalhamos com Nacionais e Importados</h2>
                 <p>Experiência e equipamento para atender as principais montadoras do mercado.</p>
             </div>
-            <div class="brands-grid">
+            <div class="brands-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
                 <div class="brand-item"><img src="https://placehold.co/140x60/f3f4f6/4B5563?text=CHEVROLET&font=montserrat" alt="Chevrolet"></div>
                 <div class="brand-item"><img src="https://placehold.co/140x60/f3f4f6/4B5563?text=VOLKSWAGEN&font=montserrat" alt="VW"></div>
                 <div class="brand-item"><img src="https://placehold.co/140x60/f3f4f6/4B5563?text=FIAT&font=montserrat" alt="Fiat"></div>
@@ -449,15 +478,29 @@
         </div>
     </section>
 
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Perguntas Frequentes</h2>
+            </div>
+            <div class="faq-box" style="max-width:800px; margin:30px auto;">
+                <h3>Vocês atendem carros importados?</h3>
+                <p>Sim, nossa equipe é especializada em veículos nacionais e importados de todas as montadoras.</p>
+
+                <h3>Quanto tempo demora uma revisão?</h3>
+                <p>A maioria das revisões preventivas (troca de óleo, filtros, freios) é realizada no mesmo dia.</p>
+
+                <h3>Aceitam seguro ou garantia estendida?</h3>
+                <p>Trabalhamos com diversas seguradoras. Entre em contato pelo WhatsApp para confirmar a sua cobertura.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="seo-text-section">
         <div class="container text-center">
-            <h2>Empresa de Ar Condicionado em Sorocaba, Votorantim e Região</h2>
+            <h2>Auto Mecânica RG4: Sua Oficina em Votorantim e Sorocaba</h2>
             <p style="max-width:900px; margin:20px auto; color:#6B7280;">
-                A Votofrio é especialista em instalação, manutenção e higienização de ar condicionado
-                em Sorocaba (Campolim, Wanel Ville, Zona Norte, Zona Oeste),
-                Votorantim e cidades vizinhas.
-                Trabalhamos com as principais marcas do mercado como Samsung, LG, Elgin,
-                Daikin e Springer, oferecendo garantia e atendimento rápido.
+                A Auto Mecânica RG4 é referência em serviços automotivos na região. Especializada em injeção eletrônica, retífica de motores, sistema de freios ABS, suspensão, troca de óleo e revisões completas. Atendemos Chevrolet, Volkswagen, Fiat, Ford, Toyota, Honda, Hyundai e marcas premium. Localizada estrategicamente no centro de Votorantim, oferecemos fácil acesso para clientes de Sorocaba (Campolim, Zona Sul, Zona Leste).
             </p>
         </div>
     </section>
@@ -466,44 +509,44 @@
         <div class="container">
             <div class="seo-grid">
                 <div class="seo-col">
-                    <h5 style="color:white; margin-bottom:15px;">Serviços</h5>
+                    <h5 style="color:white; margin-bottom:15px;">Nossos Serviços</h5>
                     <ul class="seo-list">
-                        <li>Venda de Ar Condicionado</li>
-                        <li>Instalação de Split</li>
-                        <li>Manutenção Preventiva</li>
-                        <li>Higienização Técnica</li>
-                        <li>Projetos Residenciais e Comerciais</li>
-                        <li>Conserto de Ar Condicionado</li>
+                        <li>Mecânica Geral</li>
+                        <li>Injeção Eletrônica</li>
+                        <li>Troca de Óleo e Filtros</li>
+                        <li>Revisão de Freios ABS</li>
+                        <li>Suspensão e Amortecedores</li>
+                        <li>Limpeza de Bicos Injetores</li>
                     </ul>
                 </div>
                 <div class="seo-col">
                     <h5 style="color:white; margin-bottom:15px;">Atendimento em Sorocaba</h5>
                     <ul class="seo-list">
-                        <li>Zona Sul (Campolim, Jd. dos Estados)</li>
-                        <li>Zona Norte (Jd. Santa Luiza, Pq. São Bento)</li>
-                        <li>Zona Oeste (Wanel Ville, Central Parque)</li>
-                        <li>Zona Leste (Vila Hortência, Barcelona)</li>
-                        <li>Centro (Santa Rosália, Vila Santana)</li>
+                        <li>Oficina no Campolim</li>
+                        <li>Mecânica na Zona Sul</li>
+                        <li>Atendimento Parque São Bento</li>
+                        <li>Wanel Ville e Região</li>
+                        <li>Centro de Sorocaba</li>
                     </ul>
                 </div>
                 <div class="seo-col">
-                    <h5 style="color:white; margin-bottom:15px;">Atendimento Votorantim e Região</h5>
+                    <h5 style="color:white; margin-bottom:15px;">Atendimento Votorantim</h5>
                     <ul class="seo-list">
-                        <li>Votorantim (Pq. Bela Vista, Vossoroca)</li>
-                        <li>Vila Nova Votorantim, Jd. Serrano</li>
-                        <li>Atendemos também: Itu, Salto de Pirapora</li>
-                        <li>Piedade, Araçoiaba da Serra, Iperó</li>
-                        <li>Boituva e Porto Feliz</li>
+                        <li>Centro de Votorantim</li>
+                        <li>Parque Bela Vista</li>
+                        <li>Vossoroca</li>
+                        <li>Jardim Serrano</li>
+                        <li>Rio Acima</li>
                     </ul>
                 </div>
                 <div class="seo-col">
-                    <h5 style="color:white; margin-bottom:15px;">Marcas e Modelos</h5>
+                    <h5 style="color:white; margin-bottom:15px;">Marcas Atendidas</h5>
                     <ul class="seo-list">
-                        <li>Ar Condicionado Inverter e Convencional</li>
-                        <li>Samsung, LG, Springer Midea</li>
-                        <li>Daikin, Elgin, Fujitsu, Gree</li>
-                        <li>Modelos 9000, 12000, 18000 BTUs</li>
-                        <li>Economia de energia e conforto térmico</li>
+                        <li>Chevrolet, VW, Fiat, Ford</li>
+                        <li>Toyota, Honda, Nissan, Hyundai</li>
+                        <li>Jeep, Renault, Peugeot, Citroën</li>
+                        <li>BMW, Mercedes, Audi (Consultar)</li>
+                        <li>Mitsubishi e Importados</li>
                     </ul>
                 </div>
             </div>
@@ -522,13 +565,15 @@
     </section>
 
     <footer>
-        <div class="social-links">
-            <a href="https://instagram.com/autorg4" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://wa.me/5515991113095" target="_blank"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61559945742479" target="_blank"><i class="bi bi-facebook"></i></a>
+        <div class="container">
+            <div class="social-icons">
+                <a href="https://instagram.com/autorg4" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/5515991113095" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61559945742479" target="_blank"><i class="bi bi-facebook"></i></a>
+            </div>
+            <p>© 2026 Auto Mecânica RG4. Todos os direitos reservados.</p>
+            <p style="font-size: 0.8rem; color: #666;">Desenvolvido por GTI Tecnologia</p>
         </div>
-        <p>© 2026 Auto Mecânica RG4. Todos os direitos reservados.</p>
-        <p>Desenvolvido por GTI Tecnologia</p>
     </footer>
 
     <a href="https://wa.me/5515991113095?text=Ol%C3%A1%20Auto%20RG4!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank">
@@ -537,7 +582,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Smooth scrolling corrigido para a nova estrutura
+            // Smooth scrolling
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
