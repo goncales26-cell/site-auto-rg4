@@ -25,7 +25,7 @@
         header { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
         .logo { display: flex; align-items: center; gap: 10px; }
-        .logo img { height: 45px; width: auto; border-radius: 8px; }
+        .logo img { height: 45px; width: auto; border-radius: 8px; background: white; padding: 2px; }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: #87c7ff; }
@@ -53,7 +53,7 @@
         .viral-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .viral-content h2 { text-align: left; margin-bottom: 0.5rem; font-size: 2.2rem; color: white; }
         .viral-content p { color: #e0e0e0; font-size: 1.1rem; margin-bottom: 2rem; }
-        .sorocaba-badge { background: #E1306C; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; display: inline-flex; align-items: center; gap: 5px; margin-bottom: 15px; text-decoration: none; }
+        .sorocaba-badge { background: #E1306C; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 15px; text-decoration: none; }
         
         .comment-bubble { background: white; color: #333; padding: 15px 20px; border-radius: 0 20px 20px 20px; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
         .comment-bubble strong { color: #0066b3; display: block; font-size: 0.9rem; margin-bottom: 5px; }
@@ -71,7 +71,7 @@
             margin-top: auto;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
             color: #25d366; 
             font-weight: 700;
             text-decoration: none;
@@ -103,7 +103,7 @@
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 40px; }
         .process-card { text-align: center; }
         .process-num { background: #0066b3; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: bold; font-size: 1.5rem; }
-        .process-card i { font-size: 2.5rem; color: #0066b3; margin-bottom: 10px; display: block; }
+        .process-card i { font-size: 2rem; color: #0066b3; margin-bottom: 10px; display: block; }
 
         /* --- SOBRE --- */
         .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -216,7 +216,7 @@
                     <video width="300" height="530" controls style="display: block; object-fit: cover; background: black;">
                         <source src="./video-viral.mp4" type="video/mp4">
                     </video>
-                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);"><i class="bi bi-fire"></i> +220k Views</div>
+                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);"><i class="bi bi-fire text-warning"></i> +220k Views</div>
                 </div>
             </div>
             <div class="viral-content">
@@ -291,6 +291,10 @@
                 <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=HONDA&font=montserrat" alt="Honda" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
                 <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=HYUNDAI&font=montserrat" alt="Hyundai" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
                 <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=JEEP&font=montserrat" alt="Jeep" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
+                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=RENAULT&font=montserrat" alt="Renault" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
+                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=NISSAN&font=montserrat" alt="Nissan" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
+                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=BMW&font=montserrat" alt="BMW" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
+                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=MERCEDES&font=montserrat" alt="Mercedes" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
             </div>
         </div>
     </section>
@@ -477,36 +481,31 @@
                 });
             }
 
-            // Notícias HÍBRIDAS (Backup Automático se falhar)
+            // Notícias Automáticas (HÍBRIDO: API + BACKUP)
             const newsContainer = document.getElementById('news-container');
             const backupNews = [
-                {
-                    title: "5 Sinais de que a suspensão do seu carro precisa de atenção",
-                    image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&q=80",
-                    link: "https://motor1.uol.com.br/", 
-                    date: "Dica Automotiva"
-                },
-                {
-                    title: "Gasolina ou Etanol? Qual vale mais a pena hoje?",
-                    image: "https://images.unsplash.com/photo-1626250720455-276722247cc9?w=600&q=80",
-                    link: "https://motor1.uol.com.br/",
-                    date: "Economia"
-                },
-                {
-                    title: "A importância da troca de óleo no tempo certo",
-                    image: "https://images.unsplash.com/photo-1498887960847-2a5e46312788?w=600&q=80",
-                    link: "https://motor1.uol.com.br/",
-                    date: "Manutenção"
-                }
+                { title: "5 Sinais de que a suspensão do seu carro precisa de atenção", image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Dica Automotiva" },
+                { title: "Gasolina ou Etanol? Qual vale mais a pena hoje?", image: "https://images.unsplash.com/photo-1626250720455-276722247cc9?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Economia" },
+                { title: "A importância da troca de óleo no tempo certo", image: "https://images.unsplash.com/photo-1498887960847-2a5e46312788?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Manutenção" }
             ];
 
             function renderNews(items) {
                 if(!newsContainer) return;
                 newsContainer.innerHTML = '';
-                items.forEach(item => {
+                items.forEach((item, index) => {
                     const title = item.title;
                     const link = item.link;
-                    const img = item.thumbnail || item.image || 'https://i.imgur.com/sc5KPkR.png';
+                    // CORREÇÃO DAS IMAGENS: Se a API falhar em trazer a imagem, usa uma do Unsplash
+                    let img = item.thumbnail || item.image;
+                    if (!img || img === 'https://i.imgur.com/sc5KPkR.png') {
+                         const genericImages = [
+                            'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600',
+                            'https://images.unsplash.com/photo-1498887960847-2a5e46312788?w=600',
+                            'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600'
+                         ];
+                         img = genericImages[index % genericImages.length];
+                    }
+                    
                     const date = item.pubDate ? new Date(item.pubDate).toLocaleDateString('pt-BR') : (item.date || 'Dica RG4');
 
                     newsContainer.innerHTML += `
@@ -515,7 +514,7 @@
                             <div class="news-content">
                                 <span style="font-size:0.8rem; color:#0066b3; font-weight:bold; display:block; margin-bottom:5px;">${date}</span>
                                 <h3 class="news-title">${title}</h3>
-                                <a href="${link}" target="_blank" class="news-link">Ver Matéria</a>
+                                <a href="${link}" target="_blank" class="news-link">Ler Matéria</a>
                             </div>
                         </article>`;
                 });
@@ -532,7 +531,7 @@
                     }
                 })
                 .catch(error => {
-                    console.log('Usando notícias de backup:', error);
+                    console.log('Usando backup de notícias');
                     renderNews(backupNews);
                 });
         });
