@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,29 +10,74 @@
 
     <meta name="description" content="Auto Mecânica RG4. Oficina referência em Votorantim e Sorocaba. Mecânica geral, freios, suspensão e diagnóstico. Orçamento via WhatsApp.">
     <meta name="keywords" content="mecânica votorantim, oficina sorocaba, revisão automotiva, sorocabanices, rg4, troca de óleo votorantim">
-    <meta name="author" content="GTI Tecnologia">
+    <meta name="author" content="65.611.420 FLAVIO GONCALES">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.autorg4.com.br/">
+    <meta property="og:title" content="Auto Mecânica RG4 | Oficina de Confiança em Votorantim">
+    <meta property="og:description" content="Desde 2009 cuidando do seu carro. Mecânica geral, freios, suspensão e diagnóstico em Votorantim e Sorocaba.">
+    <meta property="og:image" content="https://i.imgur.com/sc5KPkR.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://i.imgur.com/sc5KPkR.png">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Auto Mecânica RG4",
+      "url": "https://www.autorg4.com.br",
+      "telephone": "+5515991113095",
+      "email": "automecanicarg4@hotmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Professor José do Carmo Madureira, 92",
+        "addressLocality": "Votorantim",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "100"
+      },
+      "sameAs": [
+        "https://www.instagram.com/autorg4",
+        "https://www.facebook.com/profile.php?id=61559945742479"
+      ]
+    }
+    </script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
-        /* --- GERAL --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f4f4; scroll-behavior: smooth; }
         img, video { max-width: 100%; height: auto; display: block; }
         h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #0066b3; }
         section { padding: 80px 2rem; max-width: 1200px; margin: 0 auto; }
 
-        /* --- HEADER --- */
+        /* HEADER */
         header { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
         .logo { display: flex; align-items: center; gap: 10px; }
-        /* ALTERADO: border-radius: 50% para deixar o logo redondo */
         .logo img { height: 45px; width: auto; border-radius: 50%; background: white; padding: 2px; }
+        .logo span { font-weight: bold; font-size: 1.2rem; }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
         .nav-links a:hover { color: #87c7ff; }
-        
-        /* --- HERO --- */
+        /* HAMBÚRGUER */
+        .mobile-btn { display: none; background: none; border: none; color: white; font-size: 1.8rem; cursor: pointer; }
+
+        /* HERO */
         .hero { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 160px 2rem 100px; text-align: center; margin-top: 0; }
         .hero h1 { font-size: 3rem; margin-bottom: 1rem; animation: fadeInUp 1s; line-height: 1.2; }
         .hero p { font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto; }
@@ -42,71 +88,70 @@
         .btn-secondary { background: transparent; color: white; border: 2px solid white; }
         .btn-secondary:hover { background: white; color: #0066b3; }
 
-        /* --- ESTATÍSTICAS --- */
-        .stats-container { background-color: #004d87; padding: 50px 20px; color: white; margin-top: -5px; position: relative; z-index: 10; }
+        /* STATS */
+        .stats-container { background-color: #004d87; padding: 50px 20px; color: white; position: relative; z-index: 10; }
         .stats-grid { display: flex; justify-content: space-around; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; gap: 30px; }
         .stat-item { text-align: center; }
-        .stat-number { display: block; font-size: 3.5rem; font-weight: 900; color: #ffffff; line-height: 1; margin-bottom: 5px; }
-        .stat-text { font-size: 1.1rem; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+        .stat-number { display: block; font-size: 3.5rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 5px; }
+        .stat-text { font-size: 1.1rem; color: #fff; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
 
-        /* --- VIRAL --- */
+        /* ── MARQUEE DE MARCAS ── */
+        .brands-section { background: #eef2f5; padding: 50px 0; border-top: 1px solid #dce1e6; border-bottom: 1px solid #dce1e6; overflow: hidden; }
+        .brands-section h3 { text-align: center; color: #0066b3; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px; font-weight: 700; }
+        .brands-section h2 { font-size: 1.8rem; margin-bottom: 8px; }
+        .brands-section p { text-align: center; color: #666; max-width: 700px; margin: 0 auto 32px; }
+        .marquee-wrap { overflow: hidden; position: relative; }
+        .marquee-wrap::before,
+        .marquee-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 100px; z-index: 2; }
+        .marquee-wrap::before { left: 0; background: linear-gradient(to right, #eef2f5, transparent); }
+        .marquee-wrap::after { right: 0; background: linear-gradient(to left, #eef2f5, transparent); }
+        .marquee-track { display: flex; gap: 48px; align-items: center; animation: marquee 20s linear infinite; width: max-content; }
+        .marquee-track:hover { animation-play-state: paused; }
+        .brand-badge {
+            display: flex; align-items: center; justify-content: center;
+            background: white; border-radius: 10px; padding: 14px 28px;
+            font-family: 'Segoe UI', sans-serif; font-weight: 800;
+            font-size: 1rem; letter-spacing: 0.08em; color: #555;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            transition: all 0.3s; white-space: nowrap;
+            border: 1px solid #e2e8f0;
+        }
+        .brand-badge:hover { color: #0066b3; border-color: #0066b3; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,102,179,0.15); }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* VIRAL */
         .viral-section { background: linear-gradient(to right, #003366, #004d87); padding: 80px 20px; color: white; }
         .viral-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
         .viral-content h2 { text-align: left; margin-bottom: 0.5rem; font-size: 2.2rem; color: white; }
         .viral-content p { color: #e0e0e0; font-size: 1.1rem; margin-bottom: 2rem; }
         .sorocaba-badge { background: #E1306C; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 15px; text-decoration: none; }
-        
         .comment-bubble { background: white; color: #333; padding: 15px 20px; border-radius: 0 20px 20px 20px; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
         .comment-bubble strong { color: #0066b3; display: block; font-size: 0.9rem; margin-bottom: 5px; }
         .comment-bubble p { color: #333; margin: 0; font-style: italic; }
 
-        /* --- SERVIÇOS --- */
+        /* SERVIÇOS */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .service-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; border-top: 4px solid #0066b3; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+        .service-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; border-top: 4px solid #0066b3; display: flex; flex-direction: column; align-items: center; }
         .service-card:hover { transform: translateY(-10px); }
         .service-icon { font-size: 3rem; margin-bottom: 1rem; color: #0066b3; }
         .service-card h3 { color: #0066b3; margin-bottom: 0.5rem; font-size: 1.5rem; }
         .service-card p { margin-bottom: 1.5rem; }
+        .btn-service-cta { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; color: #25d366; font-weight: 700; text-decoration: none; border: 2px solid #25d366; padding: 8px 16px; border-radius: 25px; font-size: 0.9rem; transition: all 0.3s; }
+        .btn-service-cta:hover { background-color: #25d366; color: white; box-shadow: 0 4px 10px rgba(37,211,102,0.3); }
 
-        .btn-service-cta {
-            margin-top: auto;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #25d366; 
-            font-weight: 700;
-            text-decoration: none;
-            border: 2px solid #25d366;
-            padding: 8px 16px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        .btn-service-cta:hover {
-            background-color: #25d366;
-            color: white;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
-        }
-
-        /* --- MARCAS (MULTIMARCAS) --- */
-        .brands-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 20px; }
-        .brand-item img { height: 50px; filter: grayscale(100%); opacity: 0.6; transition: 0.3s; }
-        .brand-item:hover img { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
-
-        /* --- LOCAL SEO --- */
+        /* LOCAL SEO */
         .local-seo-section { background-color: #eef2f5; text-align: center; padding: 60px 2rem; border-top: 1px solid #dce1e6; border-bottom: 1px solid #dce1e6; }
         .local-seo-section h2 { margin-bottom: 1rem; font-size: 2rem; }
         .local-seo-section p { max-width: 800px; margin: 0 auto; font-size: 1.15rem; color: #555; }
-        .local-seo-section strong { color: #0066b3; }
 
-        /* --- PROCESSO --- */
+        /* PROCESSO */
         .process-section { background-color: #fff; }
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 40px; }
         .process-card { text-align: center; }
         .process-num { background: #0066b3; color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-weight: bold; font-size: 1.5rem; }
         .process-card i { font-size: 2rem; color: #0066b3; margin-bottom: 10px; display: block; }
 
-        /* --- SOBRE --- */
+        /* SOBRE */
         .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
         .about-text h3 { color: #0066b3; margin-bottom: 1rem; font-size: 1.8rem; }
         .about-text ul { list-style: none; margin-top: 1.5rem; }
@@ -114,7 +159,7 @@
         .about-text li i { color: #0066b3; font-weight: bold; }
         .about-image img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
-        /* --- HISTÓRIA --- */
+        /* HISTÓRIA */
         .history-section { background-color: #f8f9fa; width: 100%; max-width: 100%; padding: 80px 0; }
         .history-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
         .history-text h3 { color: #0066b3; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
@@ -123,65 +168,83 @@
         .history-stats { display: flex; gap: 3rem; margin-top: 2rem; }
         .stat-item-history strong { display: block; font-size: 2.5rem; color: #0066b3; font-weight: 900; }
         .stat-item-history span { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #666; font-weight: 600; }
-        .history-image img { width: 100%; border-radius: 15px; box-shadow: 20px 20px 0px rgba(0, 102, 179, 0.1); transition: 0.3s; }
+        .history-image img { width: 100%; border-radius: 15px; box-shadow: 20px 20px 0px rgba(0,102,179,0.1); transition: 0.3s; }
         .history-image:hover img { transform: scale(1.02); }
 
-        /* --- NOTÍCIAS & AVALIAÇÕES --- */
-        .news-grid, .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .news-card, .review-card { background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); overflow: hidden; }
-        .news-content, .review-card { padding: 20px; }
-        .news-image { width: 100%; height: 200px; object-fit: cover; }
-        .news-title { color: #0066b3; font-size: 1.1rem; margin: 10px 0; }
-        .news-link { display: inline-block; margin-top: 10px; color: #0066b3; font-weight: bold; text-decoration: none; border: 2px solid #0066b3; padding: 5px 15px; border-radius: 5px; }
-        .news-link:hover { background: #0066b3; color: white; }
-        .review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-        .review-avatar { width: 40px; height: 40px; background: #0066b3; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
-        .stars { color: #f4b400; }
+        /* ── AVALIAÇÕES ── */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .review-card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.07); border-left: 4px solid #0066b3; transition: transform 0.3s, box-shadow 0.3s; }
+        .review-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,102,179,0.12); }
+        .review-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+        .review-avatar { width: 44px; height: 44px; background: linear-gradient(135deg, #0066b3, #004d87); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.1rem; flex-shrink: 0; }
+        .review-header div strong { display: block; color: #0066b3; font-size: 0.95rem; }
+        .review-header div span { font-size: 0.78rem; color: #999; }
+        .stars { color: #f4b400; font-size: 0.9rem; }
+        .review-text { color: #555; font-size: 0.9rem; line-height: 1.6; font-style: italic; }
+        .google-badge-rg4 { display: inline-flex; align-items: center; gap: 10px; background: white; border: 1px solid #e2e8f0; border-radius: 50px; padding: 10px 24px; margin: 0 auto 32px; }
+        .google-badge-rg4 .g-logo { font-family: sans-serif; font-weight: 900; font-size: 1.4rem; background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .google-link-btn { display: inline-flex; align-items: center; gap: 10px; background: #0066b3; color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 20px; transition: 0.3s; }
-        .google-link-btn:hover { background-color: #004d87; }
+        .google-link-btn:hover { background-color: #004d87; transform: translateY(-2px); }
 
-        /* --- CONTATO --- */
+        /* NOTÍCIAS */
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .news-card { background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s; }
+        .news-card:hover { transform: translateY(-5px); }
+        .news-image { width: 100%; height: 200px; object-fit: cover; }
+        .news-content { padding: 20px; }
+        .news-title { color: #0066b3; font-size: 1.1rem; margin: 10px 0; }
+        .news-link { display: inline-block; margin-top: 10px; color: #0066b3; font-weight: bold; text-decoration: none; border: 2px solid #0066b3; padding: 5px 15px; border-radius: 5px; transition: 0.3s; }
+        .news-link:hover { background: #0066b3; color: white; }
+
+        /* CONTATO */
         .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
         .contact-info { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 2rem; border-radius: 15px; }
         .info-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
         .info-item i { font-size: 1.4rem; }
         .info-item a { color: white; text-decoration: none; }
         .info-item a:hover { text-decoration: underline; }
-        
         .contact-form { display: flex; flex-direction: column; gap: 1rem; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
         .form-group { display: flex; flex-direction: column; }
         .form-group label { margin-bottom: 0.5rem; color: #0066b3; font-weight: 600; }
-        .form-group input, .form-group textarea, .form-group select { padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; width: 100%; }
-        
-        .contact-form .btn-primary { background: #0066b3; color: white; border: none; font-weight: 700; width: 100%; box-shadow: 0 5px 15px rgba(0, 102, 179, 0.4); }
+        .form-group input, .form-group textarea, .form-group select { padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; width: 100%; font-size: 0.95rem; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: #0066b3; outline: none; }
+        .contact-form .btn-submit { background: #0066b3; color: white; border: none; font-weight: 700; width: 100%; padding: 14px; border-radius: 50px; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,102,179,0.4); }
+        .contact-form .btn-submit:hover { background: #004d87; transform: translateY(-2px); }
 
-        /* --- RODAPÉ --- */
+        /* FOOTER */
         footer { background: #1a1a1a; color: white; text-align: center; padding: 2rem; }
         .social-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
         .social-links a { color: white; font-size: 1.8rem; transition: 0.3s; }
         .social-links a:hover { color: #0066b3; }
-        
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 10000; display: flex; align-items: center; justify-content: center; animation: pulse-green 2s infinite; font-size: 2rem; }
-        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 10000; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; animation: pulse-green 2s infinite; }
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); } 70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
 
-        /* --- RESPONSIVO --- */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2rem; }
-            .about-content, .contact-content, .history-container, .viral-container, .services-grid, .process-grid, .reviews-grid, .news-grid { grid-template-columns: 1fr; }
-            .history-image { order: -1; margin-bottom: 2rem; }
-        }
+        /* ANIMAÇÕES REVEAL */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #004d87; padding: 20px 24px; gap: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+            .nav-links.open { display: flex; }
+            .mobile-btn { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .about-content, .contact-content, .history-container, .viral-container { grid-template-columns: 1fr; }
+            .history-image { order: -1; margin-bottom: 2rem; }
+            .stats-grid { gap: 20px; }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <nav>
             <div class="logo">
-                <img src="https://i.imgur.com/sc5KPkR.png" alt="Auto Mecânica RG4 - Oficina em Votorantim">
-                <span style="font-weight: bold; font-size: 1.2rem;">Auto Mecânica RG4</span>
+                <img src="https://i.imgur.com/sc5KPkR.png" alt="Auto Mecânica RG4">
+                <span>Auto Mecânica RG4</span>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -190,6 +253,7 @@
                 <li><a href="#avaliacoes">Avaliações</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
+            <button class="mobile-btn" id="mobile-btn"><i class="bi bi-list"></i></button>
         </nav>
     </header>
 
@@ -204,132 +268,113 @@
 
     <section class="stats-container">
         <div class="stats-grid">
-            <div class="stat-item"><span class="stat-number">+16</span><span class="stat-text">Anos de RG4</span></div>
-            <div class="stat-item"><span class="stat-number">+36</span><span class="stat-text">Anos de Experiência</span></div>
-            <div class="stat-item"><span class="stat-number">5.0</span><span class="stat-text">Estrelas no Google</span></div>
+            <div class="stat-item reveal"><span class="stat-number">+16</span><span class="stat-text">Anos de RG4</span></div>
+            <div class="stat-item reveal"><span class="stat-number">+36</span><span class="stat-text">Anos de Experiência</span></div>
+            <div class="stat-item reveal"><span class="stat-number">5.0</span><span class="stat-text">Estrelas no Google</span></div>
         </div>
     </section>
 
+    <!-- ── MARQUEE DE MARCAS ── -->
+    <div class="brands-section">
+        <h3>Especialistas em Multimarcas</h3>
+        <h2>Trabalhamos com Nacionais e Importados</h2>
+        <p>Experiência e equipamento para atender as principais montadoras do mercado.</p>
+        <div class="marquee-wrap">
+            <div class="marquee-track">
+                <span class="brand-badge">CHEVROLET</span>
+                <span class="brand-badge">VOLKSWAGEN</span>
+                <span class="brand-badge">FIAT</span>
+                <span class="brand-badge">FORD</span>
+                <span class="brand-badge">TOYOTA</span>
+                <span class="brand-badge">HONDA</span>
+                <span class="brand-badge">HYUNDAI</span>
+                <span class="brand-badge">JEEP</span>
+                <span class="brand-badge">RENAULT</span>
+                <span class="brand-badge">NISSAN</span>
+                <span class="brand-badge">BMW</span>
+                <span class="brand-badge">MERCEDES</span>
+                <span class="brand-badge">AUDI</span>
+                <span class="brand-badge">PEUGEOT</span>
+                <span class="brand-badge">CITROËN</span>
+                <span class="brand-badge">MITSUBISHI</span>
+                <!-- duplicado para loop infinito -->
+                <span class="brand-badge">CHEVROLET</span>
+                <span class="brand-badge">VOLKSWAGEN</span>
+                <span class="brand-badge">FIAT</span>
+                <span class="brand-badge">FORD</span>
+                <span class="brand-badge">TOYOTA</span>
+                <span class="brand-badge">HONDA</span>
+                <span class="brand-badge">HYUNDAI</span>
+                <span class="brand-badge">JEEP</span>
+                <span class="brand-badge">RENAULT</span>
+                <span class="brand-badge">NISSAN</span>
+                <span class="brand-badge">BMW</span>
+                <span class="brand-badge">MERCEDES</span>
+                <span class="brand-badge">AUDI</span>
+                <span class="brand-badge">PEUGEOT</span>
+                <span class="brand-badge">CITROËN</span>
+                <span class="brand-badge">MITSUBISHI</span>
+            </div>
+        </div>
+    </div>
+
     <section class="viral-section">
         <div class="viral-container">
-            <div class="viral-video-wrapper" style="text-align: center;">
-                <div style="display: inline-block; border: 4px solid white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative;">
-                    <video width="300" height="530" controls style="display: block; object-fit: cover; background: black;">
+            <div class="viral-video-wrapper" style="text-align:center;">
+                <div style="display:inline-block; border:4px solid white; border-radius:20px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.3); position:relative;">
+                    <video width="300" height="530" controls style="display:block; object-fit:cover; background:black;">
                         <source src="./video-viral.mp4" type="video/mp4">
                     </video>
-                    <div style="position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.7); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.3);"><i class="bi bi-fire text-warning"></i> +220k Views</div>
+                    <div style="position:absolute; top:15px; right:15px; background:rgba(0,0,0,0.7); color:white; padding:5px 12px; border-radius:20px; font-size:0.85rem; font-weight:bold;">
+                        <i class="bi bi-fire"></i> +220k Views
+                    </div>
                 </div>
             </div>
-            <div class="viral-content">
+            <div class="viral-content reveal">
                 <a href="https://www.instagram.com/sorocabanices" target="_blank" class="sorocaba-badge"><i class="bi bi-instagram"></i> Destaque no @sorocabanices</a>
-                <h2>Sucesso Absoluto na Região! <i class="bi bi-rocket-takeoff"></i></h2>
+                <h2>Sucesso Absoluto na Região!</h2>
                 <p>O reconhecimento veio em peso! Nosso vídeo viralizou com mais de <strong>220.000 visualizações</strong>. Veja o que disseram:</p>
-                <div class="comments-list" style="display: flex; flex-direction: column; gap: 15px;">
-                    <div class="comment-bubble"><strong>@murilogur</strong><p>"O melhor, justo e honesto. Sr. Robson e toda equipe. <i class="bi bi-hand-thumbs-up-fill text-primary"></i>"</p></div>
-                    <div class="comment-bubble"><strong>@gilmar.jr88</strong><p>"São sensacionais essas pessoas, essa família. Oficina de qualidade top! <i class="bi bi-tools"></i>"</p></div>
-                    <div class="comment-bubble"><strong>@mainerosa</strong><p>"Dona Isabel e seu Robson são uns queridos!! <i class="bi bi-heart-fill text-danger"></i> Oficina com excelentes profissionais."</p></div>
+                <div style="display:flex; flex-direction:column; gap:15px;">
+                    <div class="comment-bubble"><strong>@murilogur</strong><p>"O melhor, justo e honesto. Sr. Robson e toda equipe."</p></div>
+                    <div class="comment-bubble"><strong>@gilmar.jr88</strong><p>"São sensacionais essas pessoas, essa família. Oficina de qualidade top!"</p></div>
+                    <div class="comment-bubble"><strong>@mainerosa</strong><p>"Dona Isabel e seu Robson são uns queridos!! Oficina com excelentes profissionais."</p></div>
                 </div>
-                <a href="https://www.instagram.com/autorg4" target="_blank" class="btn btn-primary" style="margin-top: 20px;"><i class="bi bi-instagram"></i> Ver mais no Instagram</a>
+                <a href="https://www.instagram.com/autorg4" target="_blank" class="btn btn-primary" style="margin-top:20px;"><i class="bi bi-instagram"></i> Ver mais no Instagram</a>
             </div>
         </div>
     </section>
 
     <section id="servicos">
-        <h2>Nossos Serviços Automotivos</h2>
+        <h2 class="reveal">Nossos Serviços Automotivos</h2>
         <div class="services-grid">
-            <div class="service-card">
-                <i class="bi bi-tools service-icon"></i>
-                <h3>Manutenção Preventiva</h3>
-                <p>Revisões completas para manter seu veículo seguro.</p>
-                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Manuten%C3%A7%C3%A3o%20Preventiva" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a>
-            </div>
-            <div class="service-card">
-                <i class="bi bi-gear-wide-connected service-icon"></i>
-                <h3>Mecânica Geral</h3>
-                <p>Especialistas em motor, câmbio e sistemas complexos.</p>
-                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Mec%C3%A2nica%20Geral" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a>
-            </div>
-            <div class="service-card">
-                <i class="bi bi-droplet-fill service-icon"></i>
-                <h3>Troca de Óleo</h3>
-                <p>Troca rápida com produtos originais e filtros.</p>
-                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Troca%20de%20%C3%93leo" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a>
-            </div>
-            <div class="service-card">
-                <i class="bi bi-search service-icon"></i>
-                <h3>Diagnóstico Eletrônico</h3>
-                <p>Scanner de última geração para identificar falhas.</p>
-                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Diagn%C3%B3stico" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a>
-            </div>
-            <div class="service-card">
-                <i class="bi bi-car-front-fill service-icon"></i>
-                <h3>Suspensão e Freios</h3>
-                <p>Segurança em primeiro lugar para você e sua família.</p>
-                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Freios%20e%20Suspens%C3%A3o" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a>
-            </div>
-            <div class="service-card">
-                <i class="bi bi-snow service-icon"></i>
-                <h3>Ar Condicionado</h3>
-                <p>Limpeza, higienização e recarga de gás.</p>
-                <a href="https://wa.me/5515991113095?text=Ol%C3%A1%2C%20gostaria%20de%20or%C3%A7amento%20para%20Ar%20Condicionado" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="brands-section" style="padding: 60px 0; background: #eef2f5; border-top: 1px solid #dce1e6;">
-        <div class="container" style="text-align: center;">
-            <div style="margin-bottom: 40px;">
-                <span style="color: #0066b3; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; display: block; margin-bottom: 10px;">Especialistas em Multimarcas</span>
-                <h2 style="margin-bottom: 10px; font-size: 2.2rem;">Trabalhamos com Nacionais e Importados</h2>
-                <p style="max-width: 800px; margin: 0 auto; color: #666;">Experiência e equipamento para atender as principais montadoras do mercado.</p>
-            </div>
-            <div class="brands-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; align-items: center;">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=CHEVROLET&font=montserrat" alt="Chevrolet" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=VOLKSWAGEN&font=montserrat" alt="Volkswagen" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=FIAT&font=montserrat" alt="Fiat" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=FORD&font=montserrat" alt="Ford" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=TOYOTA&font=montserrat" alt="Toyota" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=HONDA&font=montserrat" alt="Honda" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=HYUNDAI&font=montserrat" alt="Hyundai" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=JEEP&font=montserrat" alt="Jeep" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=RENAULT&font=montserrat" alt="Renault" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=NISSAN&font=montserrat" alt="Nissan" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=BMW&font=montserrat" alt="BMW" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=MERCEDES&font=montserrat" alt="Mercedes" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=AUDI&font=montserrat" alt="Audi" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=PEUGEOT&font=montserrat" alt="Peugeot" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=CITROËN&font=montserrat" alt="Citroën" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-                <img src="https://placehold.co/140x60/f3f4f6/4B5563?text=MITSUBISHI&font=montserrat" alt="Mitsubishi" style="height: 50px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'; this.style.opacity='1'" onmouseout="this.style.filter='grayscale(100%)'; this.style.opacity='0.7'">
-            </div>
+            <div class="service-card reveal"><i class="bi bi-tools service-icon"></i><h3>Manutenção Preventiva</h3><p>Revisões completas para manter seu veículo seguro.</p><a href="https://wa.me/5515991113095?text=Olá,%20gostaria%20de%20orçamento%20para%20Manutenção%20Preventiva" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a></div>
+            <div class="service-card reveal"><i class="bi bi-gear-wide-connected service-icon"></i><h3>Mecânica Geral</h3><p>Especialistas em motor, câmbio e sistemas complexos.</p><a href="https://wa.me/5515991113095?text=Olá,%20gostaria%20de%20orçamento%20para%20Mecânica%20Geral" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a></div>
+            <div class="service-card reveal"><i class="bi bi-droplet-fill service-icon"></i><h3>Troca de Óleo</h3><p>Troca rápida com produtos originais e filtros.</p><a href="https://wa.me/5515991113095?text=Olá,%20gostaria%20de%20orçamento%20para%20Troca%20de%20Óleo" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a></div>
+            <div class="service-card reveal"><i class="bi bi-search service-icon"></i><h3>Diagnóstico Eletrônico</h3><p>Scanner de última geração para identificar falhas.</p><a href="https://wa.me/5515991113095?text=Olá,%20gostaria%20de%20orçamento%20para%20Diagnóstico" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a></div>
+            <div class="service-card reveal"><i class="bi bi-car-front-fill service-icon"></i><h3>Suspensão e Freios</h3><p>Segurança em primeiro lugar para você e sua família.</p><a href="https://wa.me/5515991113095?text=Olá,%20gostaria%20de%20orçamento%20para%20Freios%20e%20Suspensão" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a></div>
+            <div class="service-card reveal"><i class="bi bi-snow service-icon"></i><h3>Ar Condicionado</h3><p>Limpeza, higienização e recarga de gás.</p><a href="https://wa.me/5515991113095?text=Olá,%20gostaria%20de%20orçamento%20para%20Ar%20Condicionado" class="btn-service-cta" target="_blank"><i class="bi bi-whatsapp"></i> Orçamento no WhatsApp</a></div>
         </div>
     </section>
 
     <section class="local-seo-section">
-        <div class="container">
-            <h2>Atendimento em Votorantim e Sorocaba</h2>
-            <p>
-                A <strong>Auto Mecânica RG4</strong> atende Votorantim, Sorocaba e toda a região, 
-                oferecendo serviços de mecânica geral, revisão preventiva e diagnóstico automotivo 
-                com transparência, preço justo e rapidez. Se você procura uma oficina de confiança perto de você, 
-                venha conhecer a RG4.
-            </p>
-        </div>
+        <h2>Atendimento em Votorantim e Sorocaba</h2>
+        <p>A <strong>Auto Mecânica RG4</strong> atende Votorantim, Sorocaba e toda a região, oferecendo mecânica geral, revisão preventiva e diagnóstico automotivo com transparência, preço justo e rapidez.</p>
     </section>
 
     <section class="process-section" id="processo">
-        <h2>Como é o Nosso Atendimento?</h2>
+        <h2 class="reveal">Como é o Nosso Atendimento?</h2>
         <div class="process-grid">
-            <div class="process-card"><div class="process-num">1</div><i class="bi bi-chat-left-dots"></i><h3>Agendamento</h3><p>Você agenda pelo WhatsApp.</p></div>
-            <div class="process-card"><div class="process-num">2</div><i class="bi bi-clipboard-check"></i><h3>Diagnóstico</h3><p>Avaliamos o carro com transparência.</p></div>
-            <div class="process-card"><div class="process-num">3</div><i class="bi bi-wrench-adjustable"></i><h3>Execução</h3><p>Serviço técnico especializado.</p></div>
-            <div class="process-card"><div class="process-num">4</div><i class="bi bi-check-circle"></i><h3>Entrega</h3><p>Carro revisado e com garantia.</p></div>
+            <div class="process-card reveal"><div class="process-num">1</div><i class="bi bi-chat-left-dots"></i><h3>Agendamento</h3><p>Você agenda pelo WhatsApp.</p></div>
+            <div class="process-card reveal"><div class="process-num">2</div><i class="bi bi-clipboard-check"></i><h3>Diagnóstico</h3><p>Avaliamos o carro com transparência.</p></div>
+            <div class="process-card reveal"><div class="process-num">3</div><i class="bi bi-wrench-adjustable"></i><h3>Execução</h3><p>Serviço técnico especializado.</p></div>
+            <div class="process-card reveal"><div class="process-num">4</div><i class="bi bi-check-circle"></i><h3>Entrega</h3><p>Carro revisado e com garantia.</p></div>
         </div>
     </section>
 
     <section id="sobre">
-        <h2>Sobre a RG4</h2>
+        <h2 class="reveal">Sobre a RG4</h2>
         <div class="about-content">
-            <div class="about-text">
+            <div class="about-text reveal">
                 <h3>Honestidade em Primeiro Lugar</h3>
                 <p>A Auto Mecânica RG4 nasceu do sonho do Sr. Robson em oferecer um serviço justo em Votorantim.</p>
                 <ul>
@@ -339,18 +384,20 @@
                     <li><i class="bi bi-shield-shaded"></i> Transparência total: mostramos as peças trocadas</li>
                 </ul>
             </div>
-            <div class="about-image"><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600" alt="Equipe Auto Mecânica RG4"></div>
+            <div class="about-image reveal">
+                <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600" alt="Equipe Auto Mecânica RG4">
+            </div>
         </div>
     </section>
 
     <section class="history-section" id="historia">
         <div class="history-container">
-            <div class="history-image"><img src="./fundador.jpeg" onerror="this.src='https://images.unsplash.com/photo-1504222490245-487630b9f391?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'" alt="Sr. Robson Gonçales"></div>
-            <div class="history-text">
+            <div class="history-image reveal"><img src="./fundador.jpeg" onerror="this.src='https://images.unsplash.com/photo-1504222490245-487630b9f391?w=1000&q=80'" alt="Sr. Robson Gonçales"></div>
+            <div class="history-text reveal">
                 <h3>Nossa Origem</h3>
                 <h2>De um sonho na garagem à referência</h2>
                 <p>O Sr. <strong>Robson Gonçales</strong> dedicou 36 anos de sua vida às concessionárias Chevrolet antes de fundar a RG4 junto com a sua esposa, a Dona Isabel, casados há mais de 46 anos.</p>
-                <div class="history-highlight"><i class="bi bi-quote"></i> "Honestidade é obrigação. Confiança é saber exatamente o que está fazendo."<br><span style="font-size: 0.9rem; font-weight: bold; margin-top: 5px; display: block; color: #0066b3;">— Robson Gonçales</span></div>
+                <div class="history-highlight">"Honestidade é obrigação. Confiança é saber exatamente o que está fazendo."<br><span style="font-size:0.9rem; font-weight:bold; margin-top:5px; display:block; color:#0066b3;">— Robson Gonçales</span></div>
                 <div class="history-stats">
                     <div class="stat-item-history"><strong>+36</strong><span>Anos de Chevrolet</span></div>
                     <div class="stat-item-history"><strong>16</strong><span>Anos de RG4</span></div>
@@ -359,79 +406,101 @@
         </div>
     </section>
 
-    <section id="noticias" style="background-color: #e9ecef; padding: 4rem 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center; color: #0066b3; margin-bottom: 2rem;">Últimas do Mundo Automotivo <i class="bi bi-newspaper"></i></h2>
-            <div id="news-container" class="news-grid"><p style="text-align: center; width: 100%; color: #888;">Carregando notícias...</p></div>
+    <section id="noticias" style="background-color:#e9ecef; padding:4rem 2rem;">
+        <div style="max-width:1200px; margin:0 auto;">
+            <h2 style="text-align:center; color:#0066b3; margin-bottom:2rem;">Últimas do Mundo Automotivo <i class="bi bi-newspaper"></i></h2>
+            <div id="news-container" class="news-grid"><p style="text-align:center; width:100%; color:#888;">Carregando notícias...</p></div>
         </div>
     </section>
 
+    <!-- ── AVALIAÇÕES REAIS ── -->
     <section class="testimonials" id="avaliacoes">
-        <h2>O que dizem nossos clientes</h2>
-        
-        <div style="text-align: center; margin-bottom: 40px; margin-top: 20px;">
-            <span style="font-size: 3.5rem; font-weight: 800; color: #333; line-height: 1;">5.0</span>
-            <div style="color: #f4b400; font-size: 1.5rem; margin: 5px 0 10px;">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+        <h2 class="reveal">O que dizem nossos clientes</h2>
+        <div style="text-align:center; margin-bottom:32px;" class="reveal">
+            <div class="google-badge-rg4" style="display:inline-flex;">
+                <span class="g-logo">G</span>
+                <div>
+                    <div style="font-weight:800; font-size:1.1rem; color:#333;">5,0 <span style="color:#f4b400;">★★★★★</span></div>
+                    <div style="font-size:0.8rem; color:#999;">Mais de 100 avaliações no Google</div>
+                </div>
+                <a href="https://g.page/r/CUpPKydr0WsbEAE/review" target="_blank" style="color:#0066b3; font-weight:700; font-size:0.85rem; text-decoration:none; text-transform:uppercase;">Ver avaliações →</a>
             </div>
-            <p style="color: #666; font-size: 1rem; margin: 0;">(Baseado em avaliações reais no Google)</p>
         </div>
-
         <div class="reviews-grid">
-            <div class="review-card"><div class="review-header"><div class="review-avatar">C</div><div><strong>Carlos Silva</strong><div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div></div></div><p class="review-text">"Melhor oficina de Votorantim. O Sr. Robson é muito honesto."</p></div>
-            <div class="review-card"><div class="review-header"><div class="review-avatar">M</div><div><strong>Mariana Souza</strong><div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div></div></div><p class="review-text">"Sou de Sorocaba e venho até aqui pelo atendimento."</p></div>
-            <div class="review-card"><div class="review-header"><div class="review-avatar">R</div><div><strong>Rafael P.</strong><div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div></div></div><p class="review-text">"Serviço rápido e de qualidade. Virei cliente fiel."</p></div>
+            <div class="review-card reveal">
+                <div class="review-header"><div class="review-avatar">L</div><div><strong>Lenina Bertolli</strong><span>Votorantim, SP</span><div class="stars">★★★★★</div></div></div>
+                <p class="review-text">"A RG4 é uma família que cuida de nosso carro como se um filho seu fosse. Não fica devendo em nada aos serviços das melhores concessionárias. Minha família segue e roda, grata à família RG4."</p>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-header"><div class="review-avatar">B</div><div><strong>Bruna La Torraca</strong><span>Votorantim, SP</span><div class="stars">★★★★★</div></div></div>
+                <p class="review-text">"Difícil achar mecânico confiável que não vai tentar te passar a perna, especialmente quando tu é mulher. O pessoal da RG4 é sensacional e confiável. Só levo meu carro lá."</p>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-header"><div class="review-avatar">D</div><div><strong>Darlove Elias</strong><span>Local Guide · Votorantim, SP</span><div class="stars">★★★★★</div></div></div>
+                <p class="review-text">"Excelente atendimento, oficina limpa e organizada, ambiente familiar. Fiz uma revisão e o carro parecia novo outra vez. Profissional de extrema competência, honesto e atencioso. Parabéns Robson e equipe!"</p>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-header"><div class="review-avatar">M</div><div><strong>Murilo Gurgel</strong><span>Cliente desde 2008</span><div class="stars">★★★★★</div></div></div>
+                <p class="review-text">"Cliente desde 2008, não troco por nenhuma outra. Robson Gonçales é experiente, capacitado e acima de tudo, honesto. Tudo isso faz da RG4 a minha oficina de confiança."</p>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-header"><div class="review-avatar">G</div><div><strong>Grupo Syl</strong><span>Votorantim, SP</span><div class="stars">★★★★★</div></div></div>
+                <p class="review-text">"Oficina impecável. Venho de outra cidade, pois eu sei que posso confiar na equipe do Robson. Recomendo!"</p>
+            </div>
+            <div class="review-card reveal">
+                <div class="review-header"><div class="review-avatar">S</div><div><strong>Sebastião da Silva</strong><span>Votorantim, SP</span><div class="stars">★★★★★</div></div></div>
+                <p class="review-text">"Taí uma equipe que conhece mesmo de mecânica. O Sr Robson acolheu minha Meriva mesmo com oficina fechada. Profissionalismo acima de tudo!"</p>
+            </div>
         </div>
-        <div style="text-align: center;">
-            <a href="https://search.google.com/local/reviews?placeid=ChIJtVELhguKxZQRSk8rJ2vRaxs" target="_blank" class="google-link-btn"><i class="bi bi-google"></i> Ver todas as avaliações no Google</a>
+        <div style="text-align:center; margin-top:32px;">
+            <a href="https://g.page/r/CUpPKydr0WsbEAE/review" target="_blank" class="google-link-btn"><i class="bi bi-google"></i> Ver todas as avaliações no Google</a>
         </div>
-        <div class="google-reviews-container" style="margin-top: 30px;">
-             <iframe src="https://maps.google.com/maps?q=Rua%20Professor%20Jos%C3%A9%20do%20Carmo%20Madureira%2C%2092%20-%20Votorantim&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div style="margin-top:30px;">
+            <iframe src="https://maps.google.com/maps?q=Rua%20Professor%20José%20do%20Carmo%20Madureira%2C%2092%20-%20Votorantim&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
     <section id="contato">
-        <h2>Fale Conosco</h2>
+        <h2 class="reveal">Fale Conosco</h2>
         <div class="contact-content">
-            <div class="contact-info">
-                <h3>Entre em contato e siga nossas redes:</h3>
-                <br>
+            <div class="contact-info reveal">
+                <h3>Entre em contato e siga nossas redes:</h3><br>
                 <div class="info-item"><i class="bi bi-geo-alt-fill"></i><span>Rua Professor José do Carmo Madureira, 92<br>Centro - Votorantim, SP</span></div>
-                <div class="info-item"><i class="bi bi-whatsapp"></i><a href="https://wa.me/5515991113095" target="_blank" style="font-weight: bold;">(15) 99111-3095</a></div>
+                <div class="info-item"><i class="bi bi-whatsapp"></i><a href="https://wa.me/5515991113095" target="_blank" style="font-weight:bold;">(15) 99111-3095</a></div>
                 <div class="info-item"><i class="bi bi-envelope-fill"></i><span>automecanicarg4@hotmail.com</span></div>
                 <div class="info-item"><i class="bi bi-instagram"></i><a href="https://instagram.com/autorg4" target="_blank">@autorg4</a></div>
                 <div class="info-item"><i class="bi bi-facebook"></i><a href="https://www.facebook.com/profile.php?id=61559945742479" target="_blank">Auto Mecânica RG4</a></div>
                 <div class="info-item"><i class="bi bi-clock-fill"></i><div>Segunda a Sexta: 8h às 18h</div></div>
-            </div> 
-            <form class="contact-form">
-                <h3 style="color: #0066b3; margin-bottom: 1rem;">Solicite um Orçamento</h3>
-                <div class="form-group"><label>Nome Completo</label><input type="text" placeholder="Seu nome" required></div>
-                <div class="form-group"><label>Telefone</label><input type="tel" placeholder="(15) 00000-0000" required></div>
-                <div class="form-group">
-                    <label>Serviço Desejado</label>
-                    <select required>
+            </div>
+            <form class="contact-form reveal">
+                <h3 style="color:#0066b3; margin-bottom:1rem;">Solicite um Orçamento</h3>
+                <div class="form-group"><label>Nome Completo</label><input type="text" id="f-nome" placeholder="Seu nome" required></div>
+                <div class="form-group"><label>Telefone</label><input type="tel" id="f-tel" placeholder="(15) 99999-9999" required maxlength="15"></div>
+                <div class="form-group"><label>Serviço Desejado</label>
+                    <select id="f-servico" required>
                         <option value="">Selecione um serviço</option>
                         <option>Manutenção Preventiva</option>
                         <option>Mecânica Geral</option>
                         <option>Troca de Óleo</option>
                         <option>Diagnóstico Eletrônico</option>
                         <option>Suspensão e Freios</option>
+                        <option>Ar Condicionado</option>
                         <option>Outro</option>
                     </select>
                 </div>
-                <div class="form-group"><label>Mensagem</label><textarea rows="4" placeholder="Descreva o problema do carro"></textarea></div>
-                <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Enviar via WhatsApp</button>
+                <div class="form-group"><label>Mensagem</label><textarea id="f-msg" rows="4" placeholder="Descreva o problema do carro"></textarea></div>
+                <button type="button" class="btn-submit" onclick="enviarWhats()"><i class="bi bi-whatsapp"></i> Enviar via WhatsApp</button>
             </form>
         </div>
     </section>
 
-    <section style="background-color: #003366; color: white; padding: 2rem 0; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-            <h3 style="color: white; margin-bottom: 1.5rem; font-size: 1.4rem;">Facilidade no Pagamento</h3>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap;">
+    <section style="background-color:#003366; color:white; padding:2rem 0; text-align:center; max-width:100%;">
+        <div style="max-width:1200px; margin:0 auto; padding:0 2rem;">
+            <h3 style="color:white; margin-bottom:1.5rem; font-size:1.4rem;">Facilidade no Pagamento</h3>
+            <div style="display:flex; justify-content:center; align-items:center; gap:2rem; flex-wrap:wrap;">
                 <span><i class="bi bi-qr-code"></i> Aceitamos <strong>PIX</strong></span>
                 <span><i class="bi bi-credit-card-fill"></i> Cartão de Crédito e Débito</span>
-                <span><i class="bi bi-calendar-event"></i> Parcelamos em até <strong>12x </strong> ou em 3x <strong> SEM JUROS </strong></span>
+                <span><i class="bi bi-calendar-event"></i> Parcelamos em até <strong>12x</strong> ou 3x <strong>SEM JUROS</strong></span>
             </div>
         </div>
     </section>
@@ -443,104 +512,95 @@
             <a href="https://www.facebook.com/profile.php?id=61559945742479" target="_blank"><i class="bi bi-facebook"></i></a>
         </div>
         <p>© 2026 Auto Mecânica RG4. Todos os direitos reservados.</p>
-        <p>Desenvolvido por 65.611.420 FLAVIO GONCALES</p>
+        <p style="margin-top:6px; font-size:0.85rem; color:#888;">Desenvolvido por <strong style="color:#0066b3;">65.611.420 FLAVIO GONCALES</strong></p>
     </footer>
 
-    <a href="https://wa.me/5515991113095?text=Ol%C3%A1%20Auto%20RG4!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/5515991113095?text=Olá%20Auto%20RG4!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." class="whatsapp-float" target="_blank">
         <i class="bi bi-whatsapp"></i>
     </a>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const headerOffset = 80;
-                        const elementPosition = target.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                    }
-                });
+        // ── MENU HAMBÚRGUER ──
+        const mobileBtn = document.getElementById('mobile-btn');
+        const navLinks  = document.getElementById('nav-links');
+        mobileBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+        // ── SCROLL REVEAL ──
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                }
             });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-            // Envio para WhatsApp
-            const form = document.querySelector('.contact-form');
-            if(form){
-                form.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const nome = this.querySelector('input[type="text"]').value;
-                    const telefone = this.querySelector('input[type="tel"]').value;
-                    const servico = this.querySelector('select').value;
-                    const mensagem = this.querySelector('textarea').value;
-                    
-                    let text = "*Solicitação de Orçamento - Auto RG4* 🚗\n\n";
-                    text += "*Nome:* " + nome + "\n";
-                    text += "*Telefone:* " + telefone + "\n";
-                    text += "*Serviço:* " + servico + "\n";
-                    text += "*Mensagem:* " + mensagem;
-
-                    window.open(`https://wa.me/5515991113095?text=${encodeURIComponent(text)}`, '_blank');
-                });
-            }
-
-            // Notícias Automáticas (HÍBRIDO: API + BACKUP)
-            const newsContainer = document.getElementById('news-container');
-            const backupNews = [
-                { title: "5 Sinais de que a suspensão do seu carro precisa de atenção", image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Dica Automotiva" },
-                { title: "Gasolina ou Etanol? Qual vale mais a pena hoje?", image: "https://images.unsplash.com/photo-1626250720455-276722247cc9?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Economia" },
-                { title: "A importância da troca de óleo no tempo certo", image: "https://images.unsplash.com/photo-1498887960847-2a5e46312788?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Manutenção" }
-            ];
-
-            function renderNews(items) {
-                if(!newsContainer) return;
-                newsContainer.innerHTML = '';
-                items.forEach((item, index) => {
-                    const title = item.title;
-                    const link = item.link;
-                    // CORREÇÃO DAS IMAGENS: Se a API falhar em trazer a imagem, usa uma do Unsplash
-                    let img = item.thumbnail || item.image;
-                    if (!img || img === 'https://i.imgur.com/sc5KPkR.png') {
-                         const genericImages = [
-                            'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600',
-                            'https://images.unsplash.com/photo-1498887960847-2a5e46312788?w=600',
-                            'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600'
-                         ];
-                         img = genericImages[index % genericImages.length];
-                    }
-                    
-                    const date = item.pubDate ? new Date(item.pubDate).toLocaleDateString('pt-BR') : (item.date || 'Dica RG4');
-
-                    newsContainer.innerHTML += `
-                        <article class="news-card">
-                            <img src="${img}" class="news-image">
-                            <div class="news-content">
-                                <span style="font-size:0.8rem; color:#0066b3; font-weight:bold; display:block; margin-bottom:5px;">${date}</span>
-                                <h3 class="news-title">${title}</h3>
-                                <a href="${link}" target="_blank" class="news-link">Ler Matéria</a>
-                            </div>
-                        </article>`;
-                });
-            }
-
-            const rssUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://motor1.uol.com.br/rss/news/all/';
-            fetch(rssUrl)
-                .then(res => res.json())
-                .then(data => {
-                    if(data.status === 'ok' && data.items.length > 0) {
-                        renderNews(data.items.slice(0, 3));
-                    } else {
-                        throw new Error('Sem dados na API');
-                    }
-                })
-                .catch(error => {
-                    console.log('Usando backup de notícias');
-                    renderNews(backupNews);
-                });
+        // ── MÁSCARA TELEFONE ──
+        document.getElementById('f-tel').addEventListener('input', function(e) {
+            let v = e.target.value.replace(/\D/g,'').substring(0,11);
+            if (!v) { e.target.value=''; return; }
+            if (v.length<=2) e.target.value='('+v;
+            else if (v.length<=6) e.target.value='('+v.substring(0,2)+') '+v.substring(2);
+            else if (v.length<=10) e.target.value='('+v.substring(0,2)+') '+v.substring(2,6)+'-'+v.substring(6);
+            else e.target.value='('+v.substring(0,2)+') '+v.substring(2,7)+'-'+v.substring(7);
         });
+
+        // ── FORMULÁRIO → WHATSAPP ──
+        function enviarWhats() {
+            const nome    = document.getElementById('f-nome').value.trim();
+            const tel     = document.getElementById('f-tel').value.trim();
+            const servico = document.getElementById('f-servico').value;
+            const msg     = document.getElementById('f-msg').value.trim();
+            if (!nome || !tel || !servico) { alert('Preencha nome, telefone e serviço desejado.'); return; }
+            let text = '*Solicitação de Orçamento - Auto RG4* 🚗\n\n';
+            text += '*Nome:* ' + nome + '\n';
+            text += '*Telefone:* ' + tel + '\n';
+            text += '*Serviço:* ' + servico + '\n';
+            if (msg) text += '*Mensagem:* ' + msg;
+            window.open('https://wa.me/5515991113095?text=' + encodeURIComponent(text), '_blank');
+        }
+
+        // ── SMOOTH SCROLL ──
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 80, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ── NOTÍCIAS ──
+        const newsContainer = document.getElementById('news-container');
+        const backupNews = [
+            { title: "5 Sinais de que a suspensão do seu carro precisa de atenção", image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Dica Automotiva" },
+            { title: "Gasolina ou Etanol? Qual vale mais a pena hoje?", image: "https://images.unsplash.com/photo-1626250720455-276722247cc9?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Economia" },
+            { title: "A importância da troca de óleo no tempo certo", image: "https://images.unsplash.com/photo-1498887960847-2a5e46312788?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Manutenção" }
+        ];
+        function renderNews(items) {
+            if (!newsContainer) return;
+            newsContainer.innerHTML = '';
+            items.forEach((item, i) => {
+                let img = item.thumbnail || item.image;
+                if (!img || img.includes('sc5KPkR')) img = backupNews[i % backupNews.length].image;
+                const date = item.pubDate ? new Date(item.pubDate).toLocaleDateString('pt-BR') : (item.date || 'Dica RG4');
+                newsContainer.innerHTML += `
+                    <article class="news-card">
+                        <img src="${img}" class="news-image" loading="lazy">
+                        <div class="news-content">
+                            <span style="font-size:0.8rem; color:#0066b3; font-weight:bold; display:block; margin-bottom:5px;">${date}</span>
+                            <h3 class="news-title">${item.title}</h3>
+                            <a href="${item.link}" target="_blank" class="news-link">Ler Matéria</a>
+                        </div>
+                    </article>`;
+            });
+        }
+        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://motor1.uol.com.br/rss/news/all/')
+            .then(r => r.json())
+            .then(data => { if (data.status==='ok' && data.items.length>0) renderNews(data.items.slice(0,3)); else throw new Error(); })
+            .catch(() => renderNews(backupNews));
     </script>
 </body>
 </html>
-
