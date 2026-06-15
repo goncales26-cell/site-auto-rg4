@@ -579,28 +579,71 @@
             { title: "Gasolina ou Etanol? Qual vale mais a pena hoje?", image: "https://images.unsplash.com/photo-1626250720455-276722247cc9?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Economia" },
             { title: "A importância da troca de óleo no tempo certo", image: "https://images.unsplash.com/photo-1498887960847-2a5e46312788?w=600&q=80", link: "https://motor1.uol.com.br/", date: "Manutenção" }
         ];
+
         function renderNews(items) {
             if (!newsContainer) return;
             newsContainer.innerHTML = '';
             items.forEach((item, i) => {
-                let img = item.thumbnail || item.image;
-                if (!img || img.includes('sc5KPkR')) img = backupNews[i % backupNews.length].image;
-                const date = item.pubDate ? new Date(item.pubDate).toLocaleDateString('pt-BR') : (item.date || 'Dica RG4');
+                // Pega título — garante que é string válida e não vazia
+                const title = (item.title && item.title.trim().length > 5)
+                    ? item.title.trim()
+                    : backupNews[i % backupNews.length].title;
+
+                // Pega imagem — descarta imagens inválidas ou do logo da RG4
+                let img = item.thumbnail || item.enclosure?.link || item.image || '';
+                if (!img || img.includes('sc5KPkR') || img.length < 10) {
+                    img = backupNews[i % backupNews.length].image;
+                }
+
+                // Pega data
+                const date = item.pubDate
+                    ? new Date(item.pubDate).toLocaleDateString('pt-BR')
+                    : (item.date || 'Dica RG4');
+
+                const link = item.link || 'https://motor1.uol.com.br/';
+
                 newsContainer.innerHTML += `
                     <article class="news-card">
-                        <img src="${img}" class="news-image" loading="lazy">
+                        <img src="${img}" class="news-image" loading="lazy"
+                             onerror="this.src='${backupNews[i % backupNews.length].image}'">
                         <div class="news-content">
                             <span style="font-size:0.8rem; color:#0066b3; font-weight:bold; display:block; margin-bottom:5px;">${date}</span>
-                            <h3 class="news-title">${item.title}</h3>
-                            <a href="${item.link}" target="_blank" class="news-link">Ler Matéria</a>
+                            <h3 class="news-title">${title}</h3>
+                            <a href="${link}" target="_blank" class="news-link">Ler Matéria</a>
                         </div>
                     </article>`;
             });
         }
-        fetch('https://api.rss2json.com/v1/api.json?rss_url=https://motor1.uol.com.br/rss/news/all/')
-            .then(r => r.json())
-            .then(data => { if (data.status==='ok' && data.items.length>0) renderNews(data.items.slice(0,3)); else throw new Error(); })
-            .catch(() => renderNews(backupNews));
+
+        // Tenta três fontes RSS diferentes — se uma falhar, tenta a próxima
+        const rssFeeds = [
+            'https://api.rss2json.com/v1/api.json?rss_url=https://motor1.uol.com.br/rss/news/all/',
+            'https://api.rss2json.com/v1/api.json?rss_url=https://www.flatout.com.br/feed/',
+            'https://api.rss2json.com/v1/api.json?rss_url=https://quatrorodas.abril.com.br/feed/'
+        ];
+
+        async function carregarNoticias() {
+            for (const url of rssFeeds) {
+                try {
+                    const r    = await fetch(url);
+                    const data = await r.json();
+                    if (data.status === 'ok' && data.items && data.items.length > 0) {
+                        // Filtra itens com título válido
+                        const validos = data.items.filter(i => i.title && i.title.trim().length > 5);
+                        if (validos.length >= 3) {
+                            renderNews(validos.slice(0, 3));
+                            return;
+                        }
+                    }
+                } catch(e) {
+                    console.log('RSS falhou, tentando próxima fonte...');
+                }
+            }
+            // Se todas as fontes falharem, usa backup
+            renderNews(backupNews);
+        }
+
+        carregarNoticias();
     </script>
 </body>
 </html>
