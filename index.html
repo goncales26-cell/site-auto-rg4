@@ -199,10 +199,13 @@
         /* CONTATO */
         .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
         .contact-info { background: linear-gradient(135deg, #0066b3 0%, #004d87 100%); color: white; padding: 2rem; border-radius: 15px; }
-        .info-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; font-size: 1.1rem; }
-        .info-item i { font-size: 1.4rem; }
-        .info-item a { color: white; text-decoration: none; }
-        .info-item a:hover { text-decoration: underline; }
+        .info-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-size: 1.1rem; padding: 12px 16px; border-radius: 10px; border-left: 3px solid rgba(255,255,255,0.2); transition: all 0.3s ease; cursor: default; }
+        .info-item:hover { background: rgba(255,255,255,0.12); border-left-color: white; transform: translateX(6px); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+        .info-item i { font-size: 1.4rem; width: 28px; text-align: center; transition: transform 0.3s; flex-shrink: 0; }
+        .info-item:hover i { transform: scale(1.25); }
+        .info-item a { color: white; text-decoration: none; font-weight: 500; position: relative; }
+        .info-item a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: rgba(255,255,255,0.8); border-radius: 2px; transition: width 0.3s ease; }
+        .info-item:hover a::after { width: 100%; }
         .contact-form { display: flex; flex-direction: column; gap: 1rem; background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
         .form-group { display: flex; flex-direction: column; }
         .form-group label { margin-bottom: 0.5rem; color: #0066b3; font-weight: 600; }
